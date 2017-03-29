@@ -1,0 +1,252 @@
+.chapters > div{
+    height: auto;
+    width: 100%;
+    border: 2px solid #bbbbbb;
+    margin-top: 10px;
+}
+.chapters > div:hover{
+    opacity: 0.8;
+    border: 2px solid #bbbbbb;
+    background: #eeeeee;
+}
+.chapters > div > h3{
+    margin: 0;
+    text-align: center;
+    color: blue
+}
+
+#chapter01 > .color{
+    float: left;
+    width: 245px;
+    height: 250px;
+    padding: 1px 20px;
+    color:#ff0000;
+}
+#chapter01 > .background{
+    float: left;
+    width: 245px;
+    height: 245px;
+    padding: 1px 10px;
+    background:url(../../../../icons/pictures.ico), #9999ff fixed no-repeat;
+}
+
+#chapter02 > .font{
+    float: left;
+    width: 260px;
+    height: 60px;
+    margin: 1px 10px;
+    font: bold 26pt  verdana, sans-serif;
+}
+
+#chapter03 > .text{
+    float: left;
+    width: 96%;
+    margin: 1px 10px;
+    padding: 1em;
+    text-indent: -1em;
+    text-align: center;
+    text-decoration:line-through;
+    letter-spacing: 0;
+    word-spacing: 1em;
+    word-wrap: break-word;
+}
+
+#chapter04 caption{
+   font-weight: bold;
+}
+#chapter04 td{
+    width: 40px;
+}
+#chapter04 td:hover{
+    background: #ff0000;
+}
+#chapter04 > .table1 {
+    float: left;
+    border: 4px groove #00ff00;
+    margin: 5px;
+}
+#chapter04 > .table2 {
+    float: left;
+    border: 1px solid #0000ff;
+    border-collapse: collapse;
+    margin: 5px;
+}
+
+#chapter05 > .container{
+    margin: 1px;
+    padding: 4px;
+    border: 2px dotted #9999ff;
+    background: #00ff00;
+}
+
+#chapter06 li{
+    border: 1px solid #ff00ff;
+    margin: 1px;
+}
+#chapter06 li:hover{
+    background: #00ff00;
+    cursor: pointer;
+}
+#chapter06 > ol.list{
+    float: left;
+    margin:0 40px;
+    list-style-type: decimal;
+}
+#chapter06 > ul.list{
+    float: left;
+    margin: 0 40px;
+    list-style: disc outside;
+}
+
+#chapter07 > .system-cursor{
+    float: left;
+    margin: 0 40px;
+    padding: 1px 20px;
+    background: #99ff99;
+    cursor: alias;
+}
+#chapter07 > .system-ie{
+    float: left;
+    margin: 2px 40px;
+    padding: 1px 20px;
+    background: #99ff99;
+}
+#chapter07 > .system-ie > div{
+    margin: 5px 0 0 0;
+    width: 200px;
+    height: 200px;
+    border: 1px groove #0000ff;
+    word-wrap: break-word;
+    overflow-y: auto;
+
+    scrollbar-3dlight-color: yellow;
+    scrollbar-arrow-color: red;
+    scrollbar-base-color: lime;
+    scrollbar-darkshadow-color: green;
+    scrollbar-face-color: blue;
+    scrollbar-highlight-color: white;
+    scrollbar-shadow-color: navy;
+}
+#chapter08 > div{
+    float: left;
+    height: 60px;
+    margin: 5px 40px;
+    padding: 1px 20px;
+    background: #ddddff;
+    font-weight: bold;
+}
+#chapter08 > div:hover{
+    background: #99ff99;
+    cursor: pointer;
+}
+#chapter08 > .alpha{
+    filter: Alpha(opacity=70);
+}
+#chapter08 > .blend-trans{
+    filter: BlendTrans(duration=1000);
+}
+#chapter08 > .blur{
+    filter: Blur(Add=false,Direction=90,strength=5);
+}
+#chapter08 > .blur{
+    filter: Chroma(Color=#99ff99,Enabled=true);
+}
+#chapter08 > .drop-shadow{
+    filter: DropShadow(Color=#99ff99,Enabled=true,OffX=10,OffY=10,Positive=true);
+}
+
+#chapter08 > .emboss{
+    filter: progid:DXImageTransform.Microsoft.Emboss();
+}
+#chapter08 > .engrave{
+    filter:progid:DXImageTransform.Microsoft.Engrave();
+}
+#chapter08 > .flip-h{
+    filter: FlipH();
+}
+#chapter08 > .flip-v{
+    filter: FlipV();
+}
+#chapter08 > .glow{
+    filter: Glow(Color=#99ff99,Enabled=true,Strength=100);
+}
+#chapter08 > .gray{
+    filter: Gray(Enabled=true);
+}
+#chapter08 > .invert{
+    filter: Invert(Enabled=true);
+}
+#chapter08 > .mask-filter{
+    filter:progid:DXImageTransform.Microsoft.MaskFilter(Color=#99ff99);
+}
+#chapter08 > .motion-blur{
+    filter:progid:DXImageTransform.Microsoft.MotionBlur(Add=true,Direction=45,Strength=10);
+}
+#chapter08 > .shadow{
+    filter: Shadow(Color=#99ff99,Direction=45,Enabled=true,Strength=10);
+}
+#chapter08 > .wave{
+    filter: Wave(Add=true,Enabled=true,Freq=3,LightStrength=10,Phase=2,Strength=10);
+}
+#chapter08 > .xray{
+    filter: Xray(Enabled=true);
+}
+#chapter08 > .basic-image{
+    filter: progid:DXImageTransform.Microsoft.BasicImage();
+}
+#chapter08 > .reveal-trans{
+    filter: RevealTrans(Transition=12,Duration=2);
+}
+#chapter08 > .light{
+    filter: Light();
+}
+#chapter08 > .compositor{
+    filter: Compositor();
+}
+
+#chapter09 > div{
+    float: left;
+    height: 60px;
+    margin: 5px 40px;
+    padding: 1px 20px;
+    background: #009900;
+    font-weight: bold;
+}
+#chapter09 > .diaplay{
+    display:inline-block;
+}
+#chapter09 > .clear{
+    float: left;
+    clear:none;
+}
+#chapter09 > .direction{
+    float: left;
+    width: 200px;
+    direction: rtl;
+}
+
+#chapter10 > div{
+    float: left;
+    height: 60px;
+    margin: 5px 40px;
+    padding: 1px 0;
+    background: #ff99ff;
+    font-weight: bold;
+}
+
+#chapter11 > div{
+    float: left;
+    height: 60px;
+    margin: 5px 40px;
+    padding: 1px 20px;
+    background: #66ff99;
+    font-weight: bold;
+}
+#chapter11 > .overflow{
+    clip:rect(2px,2px,2px,2px);
+}
+
+
+
+
+

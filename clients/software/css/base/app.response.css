@@ -1,0 +1,398 @@
+.base-body {
+    background-color: grey;
+    padding: 1%;
+}
+.base-body >*{
+    background-color: white;
+    margin: 5% 5%;
+    text-align: center;
+    display: inline-block;
+}
+
+.base-body .base-body-0{
+    width: 100px;
+    height: 100px;
+}
+.base-body .base-body-1{
+    width: 200px;
+    height: 100px;
+}
+.base-body .base-body-2{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50%;
+}
+.base-body .base-body-3{
+    width: 200px;
+    height: 100px;
+    -moz-border-radius: 100px/50px;
+    -webkit-border-radius: 100px/50px;
+    border-radius: 50%;
+}
+.base-body .base-body-4{
+    width: 0;
+    height: 0;
+    border-left: 50px solid grey;
+    border-right: 50px solid grey;
+    border-bottom: 100px solid white;
+}
+.base-body .base-body-5{
+    width: 0;
+    height: 0;
+    border-left: 50px solid grey;
+    border-right: 50px solid grey;
+    border-top: 100px solid white;
+}
+.base-body .base-body-6{
+    width: 0;
+    height: 0;
+    border-top: 50px solid grey;
+    border-bottom: 50px solid grey;
+    border-left: 100px solid white;
+}
+.base-body .base-body-7{
+    width: 0;
+    height: 0;
+    border-top: 50px solid grey;
+    border-bottom: 50px solid grey;
+    border-right: 100px solid white;
+}
+.base-body .base-body-8{
+    width: 0;
+    height: 0;
+    border-left: 100px solid grey;
+    border-bottom: 100px solid white;
+}
+.base-body .base-body-9{
+    width: 0;
+    height: 0;
+    border-right: 100px solid grey;
+    border-bottom: 100px solid white;
+}
+.base-body .base-body-10{
+    width: 0;
+    height: 0;
+    border-left: 100px solid grey;
+    border-top: 100px solid white;
+}
+.base-body .base-body-11{
+    width: 0;
+    height: 0;
+    border-right: 100px solid grey;
+    border-top: 100px solid white;
+}
+.base-body .base-body-12{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 9px solid grey;
+    border-right: 9px solid white;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+.base-body .base-body-12:after{
+    content: "";
+    position: absolute;
+    border: 0 solid grey;
+    border-top: 3px solid white;
+    border-radius: 20px 0 0 0;
+    top:-12px;
+    left:-9px;
+    width: 12px;
+    height: 12px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+.base-body .base-body-13{
+    width: 100px;
+    height: 0;
+    border-left: 50px solid grey;
+    border-right: 50px solid grey;
+    border-bottom: 100px solid white;
+}
+
+.base-body .base-body-14{
+    width: 120px;
+    height: 100px;
+    -webkit-transform: skew(45deg);
+    -moz-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    -o-transform: skew(45deg);
+}
+.base-body .base-body-15{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 50px solid grey;
+    border-right: 50px solid grey;
+    border-bottom: 100px solid white;
+}
+.base-body .base-body-15:after{
+    width: 0;
+    height: 0;
+    top:30px;
+    left:-50px;
+    content: "";
+    position: absolute;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid white;
+}
+.base-body .base-body-16{
+    position: relative;
+    width: 96px;
+    height: 48px;
+    background: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+}
+.base-body .base-body-16:before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:0;
+    background: white;
+    border: 18px solid black;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+.base-body .base-body-16:after{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:50%;
+    background: black;
+    border: 18px solid white;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+
+.learn-body>*{
+    margin: 2% 5% ;
+}
+.learn-body-background-origin{
+    width: 200px;
+    height: 100px;
+    background: hsl(140,10%,50%);
+    background-origin :border-box;
+    -moz-background-origin :border;
+    -webkit-background-origin :border-box;
+    -o-background-origin:border-box;
+}
+.learn-body-text-shadow>*{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    background: hsl(140,10%,50%);
+    font-size: 6em;
+    margin: 5px;
+    text-align: center;
+ }
+.learn-body-text-shadow-0{
+    text-shadow: red 2px 2px 2px ;
+}
+.learn-body-text-shadow-1{
+    text-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.75);
+}
+.learn-body-text-shadow-2{
+    text-shadow: 0 1px #ffffff,4px 4px 0 #dad7d7;
+}
+.learn-body-text-shadow-3{
+    box-shadow: 0 3px 5px #444444;
+}
+.learn-body-text-shadow-4{
+    box-shadow:inset 0 0 40px #000000;
+}
+.learn-body-text-shadow-5{
+    box-shadow: inset 0 0 30px hsl(0, 0%, 0%),
+    inset 0 0 70px hsla(0, 97%, 53%, 1);
+}
+.learn-body-text-shadow-6{
+    background: linear-gradient(90deg, #ffffff 0%, #e4e4e4 50%, #ffffff 100%);
+}
+.learn-body-text-shadow-7{
+    /*background: radial-gradient(25px 25px, ellipse cover, #ffffff 72%, #dddddd 100%);
+    background: radial-gradient(circle, ellipse cover, #ffffff 72%, #dddddd 100%);*/
+    background: repeating-linear-gradient(90deg, #ffffff 0px, hsla(0, 1%, 50%,0.1) 5px);
+}
+.learn-body-transition>*{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    background: hsl(140,10%,50%);
+    margin: 5px;
+    transition: all 1s ease 0s;
+}
+.learn-body-transition>*:hover{
+    transform-origin: 20% 20%;/*变换的中心点*/
+}
+.learn-body-transition-0:hover{
+    transform: scale(1.7);
+}
+.learn-body-transition-1:hover{
+    transform: translate(40px, 0px);
+}
+.learn-body-transition-2:hover{
+    transform: rotate(3690deg) ;
+}
+.learn-body-transition-3:hover{
+    transform: skew(10deg, 2deg) ;
+}
+.learn-body-transition-4:hover{
+    transform: matrix(1.678, -0.256, 1.522, 2.333, -51.533, -1.989);
+}
+.learn-body-transition-5:hover{
+    transform: rotateY(360deg);
+}
+
+.learn-body-keyframes>*{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    background: hsl(140,10%,50%);
+    margin: 5px;
+    font-size: 6em;
+    text-align: center;
+}
+@keyframes warning {
+    0% {
+        text-shadow: 0px 0px 4px #000000;
+    }
+    50% {
+        text-shadow: 0 0 20px #000000;
+    }
+    100% {
+        text-shadow: 0px 0px 4px #000000;
+    }
+}
+.learn-body-keyframes-0:hover{
+    cursor: pointer;
+    animation: warning 1.5s infinite ease-in;
+}
+
+.learn-body-others>*{
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    background: hsl(140, 10%, 50%);
+    margin: 5px;
+    font-size: 6em;
+    text-align: center;
+}
+.learn-body-others-0{
+    outline: #897048 groove 2px;
+    outline-offset: 5px;
+}
+.learn-body-others-1{
+    top:50%; left:0;
+    nav-index:4;nav-right:#b1; nav-left:#b3;nav-down:#b1; nav-up:#b3;
+
+}
+
+/*
+about form
+*/
+#redemption {
+    width: 100%;
+    font-family: 'ColaborateThinRegular';
+    font-weight: 400;
+}
+#redemption hgroup {
+    margin-bottom: 20px;
+}
+#redemption div {
+    width: 100%;
+    margin-bottom: 15px;
+    float: left;
+}
+#redemption span#range {
+    float: left;
+    font-size: 3em;
+    width: 100%;
+    color: red;
+    clear: both;
+    text-align: center;
+}
+#howYouRateThis,#yearOfCrime {
+    text-align: right;
+}
+#redemption legend {
+    font-style: italic;
+    color: #434242;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    float: left;
+    width: 100%;
+}
+#redemption fieldset {
+    border: 1px dotted #cccccc;
+    padding: 2%;
+    margin-bottom: 20px;
+}
+#redemption label {
+    width: 40%;
+    float: left;
+}
+#redemption input {
+    height: 20px;
+    font-size: 1em;
+    width: 40%;
+    float: right;
+}
+#redemption textarea {
+    height: 60px;
+    font-size: 1em;
+    width: 40%;
+    float: right;
+}
+#redemption input#submit {
+    text-decoration: none;
+    height: 34px;
+    font: 1.25em /* 36px ÷ 16 */ 'BebasNeueRegular';
+    background-color: #b01c20;
+    border-radius: 8px;
+    color: white;
+    float: right;
+    margin-bottom: 10px;
+    background: linear-gradient(top, rgb(241,92,96) 0%, rgb(17,18,19) 100%);
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 26.6667%, 0.8);
+    text-shadow: 0px 1px black;
+    border: 1px solid #bfbfbf;
+}
+.polyfill-important .step-controls {
+    margin-right: -20px!important;
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .base-body {
+        background-color: red;
+    }
+}
+@media screen and (max-width: 768px) {
+    .base-body {
+        background-color: orange;
+    }
+}
+@media screen and (max-width: 550px) {
+    .base-body {
+        background-color: yellow;
+    }
+}
+@media screen and (max-width: 320px) {
+    .base-body {
+        background-color: green;
+    }
+}

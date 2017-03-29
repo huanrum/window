@@ -1,0 +1,22 @@
+//sass style
+//-------------------------------
+@mixin center-block {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+//sass style
+//-------------------------------
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+//css style
+//-------------------------------
+.opacity{
+  @include opacity; //参数使用默认值
+}
+.opacity-80{
+  @include opacity(80); //传递参数
+}

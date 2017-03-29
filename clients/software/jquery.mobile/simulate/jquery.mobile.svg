@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <g id="desktop-bottom-1">
+        <path stroke-width="2" stroke="#FFFFFF" d="M6,10 L10,15 L14,10"/>
+    </g>
+    <g id="desktop-bottom-2">
+        <path stroke-width="2" stroke="#FFFFFF" d="M15,4 L15,16 L5,10z"/>
+    </g>
+    <g id="desktop-bottom-3">
+        <circle stroke-width="2" stroke="#FFFFFF" cx="10" cy="10" r="6"/>
+    </g>
+    <g id="desktop-bottom-4">
+        <path stroke-width="2" stroke="#FFFFFF" d="M4,4 L16,4 L16,16 L4,16z"/>
+    </g>
+
+</svg>

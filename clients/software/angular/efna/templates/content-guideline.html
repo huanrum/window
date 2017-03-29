@@ -1,0 +1,29 @@
+<div class="header">
+    <span class="header-title">{{title+'Menu' | language}}</span>
+</div>
+<div class="content guideline">
+    <div class="item-guideline" ng-repeat="item in dataList">
+        <div>
+            <div class="dataTitle">
+                <span>{{title+'Menu' | language}} - </span><span>{{'language'+ item.languageType | language}}</span>
+            </div>
+            <div class="dataContent" ng-if="!!item.lastUpdate">
+                <span>{{'lastUpdate' | language}}:</span><span>{{item.lastUpdate | sinoDate:'dd MMM,yyyy'}}</span>
+            </div>
+        </div>
+        <div class="form-control">
+            <span >{{'file' | language}} : </span><a ng-click="open(fileUrl,{id:item.id})" sino-use-id="'viewPdf-'+$index" sino-tooltip="iframe(fileUrl,{id:item.id},'1000*800')">{{item.guidelineName}}</a>
+        </div>
+    </div>
+    <div class="btn-actions">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <button ng-repeat="toolbar in actions" class="btn btn-success weight-btn fa {{toolbar.class}}" ng-click="toolbar.fn(dataList)" ng-disabled="toolbar.filter()" sino-use-id="toolbar.title">{{toolbar.title| language}}</button>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+</div>

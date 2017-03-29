@@ -1,0 +1,84 @@
+.javascript-function>*{
+    margin: 2%;
+    color: #0000ff;
+    width: 120px;
+}
+
+.javascript-link>*{
+    margin: 2%;
+    color: #0000ff;
+    display: inline-block;
+    float: left;
+    width: 120px;
+}
+
+.javascript-link>*:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.javascript-link>*>img{
+   height: 100px;
+    width: 120px;
+}
+
+.javascript-mode>*{
+    width: auto;
+    margin: 2%;
+    color: #0099ff;
+}
+.javascript-mode>*:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.javascript-mode-tooltip{
+    position: fixed;
+    padding: 1%;
+    background: #ffddff;
+    border: 1px solid #333333;
+    border-radius: 5%;
+}
+
+.javascript-mode-mv-tooltip{
+    position: fixed;
+    padding: 1%;
+    background: #ffddff;
+    border: 1px solid #333333;
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+.javascript-array>*{
+    margin: 1% 2%;
+    color: #ff00ff;
+    width:160px;
+    display: inline-block;
+    font-size: 2em;
+}
+
+.javascript-arithmetic>*{
+    width: auto;
+    margin: 1% 2%;
+    color: #ff00ff;
+}
+
+.javascript-lottery>*{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.javascript-lottery-message{
+    font-size: 4em;
+}
+
+.javascript-test{
+    -webkit-column-count: 5;
+    -webkit-column-width: 200px;
+}
+
+.save-data textarea{
+    width: 50%;
+    height: 200px;
+}

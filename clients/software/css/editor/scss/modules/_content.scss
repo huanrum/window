@@ -1,0 +1,12 @@
+//sass style
+//-------------------------------
+@mixin max-screen($res){
+  @media only screen and ( max-width: $res )
+  {
+    @content;
+  }
+}
+
+@include max-screen(480px) {
+  body { color: red }
+}

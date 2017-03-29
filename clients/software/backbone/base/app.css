@@ -1,0 +1,25 @@
+.backbone-underScope>*{
+    margin: 1% 2%;
+    color: #0000ff;
+    display: inline-block;
+    float: left;
+    width: 80px;
+    font-weight: bold;
+}
+.backbone-underScope>*:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.backbone-event>*{
+    margin: 1% 2%;
+    color: #0000ff;
+    display: inline-block;
+    float: left;
+    width: 40px;
+    font-weight: bold;
+}
+.backbone-event>*:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+.header{
+    height: 10%;
+    min-height: 4em;
+}
+.header>*:first-child>*{
+    display: inline-block;
+}
+
+.header ul.nav-tabs li{
+    font-size: 1.2em;
+    background: #dddddd;
+    margin-left: 1px;
+}
+
+.content{
+    height:700px;
+    overflow-y: hidden;
+}
+
+.select>div{
+    border: 1px solid #d3d3d3;
+    color:#ffffff;
+}
+
+[sino-multiple] li>[sino-multiple]{
+    display: none;
+}
+[sino-multiple] li.select>[sino-multiple]{
+    display: block;
+}
+[sino-multiple] li:hover>[sino-multiple]{
+    display: block;
+}

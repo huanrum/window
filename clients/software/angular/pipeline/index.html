@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="../../../../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../../../../lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+
+    <script src="../../../../lib/jquery/jquery-2.1.0.js"></script>
+    <script src="../../../../lib/angular/angular.js"></script>
+
+    <script src="app.js"></script>
+    <script src="language/en.js"></script>
+    <script src="language/zh-cn.js"></script>
+    <script src="main-controller.js"></script>
+
+    <script src="home/course/course-controller.js"></script>
+
+
+</head>
+<body ng-app="sino.main" ng-controller="mainController">
+    <div class="sino-header">
+        <ul class="sino-menus">
+            <li ng-repeat="(title,subMenus) in menus" ng-click="clickMenu(title)" sino-menu="subMenus">
+                <div ng-class="{'active':title === activeTab}">
+                    <span>{{title|language}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="sino-content">
+        <div ng-repeat="(title,subMenus) in menus" ng-if="title === activeTab" class="tab-panel" sino-scroll>
+            <div ng-repeat="sub in subMenus"  class="sino-controller">
+                <div sino-html="[title,sub]"></div>
+            </div>
+        </div>
+    </div>
+    <div class="sino-footer">
+
+    </div>
+</body>
+</html>

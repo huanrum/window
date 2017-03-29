@@ -1,0 +1,53 @@
+.test02 {
+  /*-*-main-content style---------------*/ }
+  .test02 .main-content .main-menu {
+    width: 100%;
+    height: 4em;
+    border-right: 1px solid #999999;
+    background: #dddddd;
+    color: #dddddd;
+    z-index: 9990; }
+    .test02 .main-content .main-menu ul li {
+      display: inline-flex;
+      color: #449d99; }
+      .test02 .main-content .main-menu ul li.active {
+        background: #449d99;
+        color: #ffffff; }
+      .test02 .main-content .main-menu ul li > * {
+        display: inline-block; }
+      .test02 .main-content .main-menu ul li ul {
+        z-index: 9990;
+        background: #dddddd;
+        padding: 0.2em; }
+        .test02 .main-content .main-menu ul li ul li {
+          display: block;
+          color: #449d99;
+          font-weight: bold;
+          cursor: pointer;
+          height: 1.8em;
+          border-top-left-radius: 2em 1em;
+          border-bottom-left-radius: 2em 1em; }
+          .test02 .main-content .main-menu ul li ul li.active {
+            color: #ffffff;
+            border-left: none; }
+          .test02 .main-content .main-menu ul li ul li div:not(.tabs) {
+            padding: 0.2em 2em; }
+        @media screen and (min-width: 1000px) {
+          .test02 .main-content .main-menu ul li ul li .tabs {
+            position: fixed;
+            top: 7.5em;
+            left: 0;
+            z-index: 9998; }
+            .test02 .main-content .main-menu ul li ul li .tabs * {
+              color: #449d99; }
+            .test02 .main-content .main-menu ul li ul li .tabs .active {
+              background: #449d99;
+              color: #ffffff; } }
+  .test02 .main-content .main-details {
+    position: fixed;
+    top: 7em;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=self.theme.css.map */

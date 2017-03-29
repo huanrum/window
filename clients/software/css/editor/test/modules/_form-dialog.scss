@@ -1,0 +1,83 @@
+/*-form-dialog style---------------*/
+.form-dialog{
+  border-radius: 1em;
+
+  >*:first-child{
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+  >*:last-child{
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+
+  .dialog-header{
+    background: #66afe9;
+    height: 2em;
+    text-align: center;
+    label{
+      font-size: 1.3em;
+      margin-top: 0.3em;
+    }
+    .close{
+      float: right;
+      margin: 0.3em;
+    }
+  }
+
+  .dialog-section{
+    background: #dddddd;
+    padding: 1em 1em;
+    .some-field {
+      &.col-md-6 {
+        padding: 0;
+        float: left;
+        width: 50%;
+      }
+    }
+    .row{
+      margin: 1em;
+    }
+    .right{
+      float: right;
+    }
+  }
+
+  .dialog-footer{
+    background: #66afe9;
+    height: 3em;
+    text-align: center;
+    >*{
+      cursor: pointer;
+      margin: 0.3em 2em;
+    }
+  }
+}
+
+/*test-01*/
+@mixin background($color){
+  background:$color;
+}
+
+@function randomcolor(){
+  @return 'rgb('+random()*100+'%,'+random()*100+'%,'+random()*100+'%)';
+}
+
+@function linearcolor($count){
+  $return:();
+  @for $i from 0 through $count {
+    $return : ($return ,(randomcolor() $i*(100/$count)+'%'))
+  }
+  @return $return;
+}
+
+#pattern{
+  @include background(
+          linear-gradient(
+                          360deg,
+                          #{linearcolor(16)}
+          ));
+  height:300px;
+  width:400px;
+}
+

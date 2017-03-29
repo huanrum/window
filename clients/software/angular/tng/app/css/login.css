@@ -1,0 +1,100 @@
+/*-login style---------------*/
+.login-modal{
+    background:#4FC3F7;
+}
+.login-modal .cms-body{
+    padding: 1em;
+    outline:none;
+    outline-offset:10px;
+    width: 35em;
+}
+.login-modal .cms-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    color: #ffffff;
+}
+
+.login-modal .cms-body .row{
+    padding: 2em 2em 0;
+    text-align: center;
+}
+
+.login-modal .cms-body .login-content{
+    margin: 2em 0;
+    border-radius: 3px;
+    background: rgba(0, 0, 0,0.05);
+    padding:2em;
+    border: 2px solid rgba(255, 255,255,0.6) !important;
+}
+
+.login-modal .cms-body .login-content .row span{
+    font-size: 1em;
+    text-align: left;
+    display: block;
+    color: #8D959F;
+    margin: 0 auto;
+}
+.login-modal .cms-body .login-content .row input{
+    border-radius: 0.1em;
+    font-size: 1em;
+    line-height: 2.5em;
+    border:1px solid #D7D7D7;
+    padding: 0 0.5em;
+}
+
+.login-modal .cms-body .login-content .row span{
+    color: #ffffff;
+    width: 30%;
+    line-height: 2.5em;
+    float: left;
+}
+.login-modal .cms-body .login-content .row input{
+    width: 100%;
+    background: #ffffff !important;
+    border-radius: 5px;
+    height: 2.5em;
+}
+.login-modal .cms-body .login-content .row span+input{
+    width: 70%;
+    float: left;
+    background: #ffffff !important;
+    border-radius: 5px;
+    height: 2.5em;
+}
+
+
+.login-modal .cms-body .login-content .row button{
+    width: 40%;
+    font-size: 1.2em;
+}
+.login-modal .cms-body .login-content:not(.forget) .row button.btn:first-child{
+    background: #dddddd;
+    float: left;
+    color: #808080;
+}
+.login-modal .cms-body .login-content:not(.forget) .row button.btn:last-child,.login-modal .cms-body .login-content .row .link{
+    float:right;
+}
+
+.login-modal .cms-body .login-content .row .link{
+    cursor: pointer;
+    float:right;
+    color: #ffffff;
+}
+.forgot-password label{
+    width: 20% !important;
+    float: left;
+    line-height: 2.5em;
+}
+.forgot-password input{
+    width: 80% !important;
+    float:right;
+}
+.forgot-error{
+    padding:0 2em !important;
+}
+.forgot-btn button{
+
+}

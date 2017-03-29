@@ -1,0 +1,69 @@
+//sass style
+//-------------------------------
+//没有跳出
+.parent-1 {
+  color:#f00;
+  .child {
+    width:100px;
+  }
+}
+
+/*单个选择器跳出*/
+.parent-2 {
+  color:#f00;
+  @at-root .child {
+    width:200px;
+  }
+}
+
+//多个选择器跳出
+.parent-3 {
+  background:#f00;
+  @at-root {
+    .child1 {
+      width:300px;
+    }
+    .child2 {
+      width:400px;
+    }
+  }
+}
+
+
+//sass style
+//-------------------------------
+//跳出父级元素嵌套
+@media print {
+  .parent1{
+    color:#f00;
+    @at-root .child1 {
+      width:200px;
+    }
+  }
+}
+
+//跳出media嵌套，父级有效
+@media print {
+  .parent2{
+    color:#f00;
+
+    @at-root (without: media) {
+      .child2 {
+        width:200px;
+      }
+    }
+  }
+}
+
+//跳出media和父级
+@media print {
+  .parent3{
+    color:#f00;
+
+    @at-root (without: all) {
+      .child3 {
+        width:200px;
+      }
+    }
+  }
+}

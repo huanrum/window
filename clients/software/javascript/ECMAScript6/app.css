@@ -1,0 +1,16 @@
+body{
+	color:#ffffff;
+}
+
+.ecmscript-letconst h5{
+	display: inline-table;
+}
+.ecmscript-letconst h5:after{
+	content: ' ->> ';
+}
+.ecmscript-function ol li{
+	margin: 1em;
+}
+.ecmscript-function ol li div{
+	 margin-left: 2em;
+ }

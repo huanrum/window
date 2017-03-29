@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.sino-menus{
+    margin: 0;
+    cursor: pointer;
+}
+
+.sino-menus>li{
+    display: inline-block;
+    width: 10em;
+    margin: 1em 0.2em 0.1em 0.2em;
+    background: #dddddd;
+    color: #449d44;
+    text-align: center;
+}
+
+.sino-menus>li ul{
+    position: absolute;
+    width: 9em;
+    margin-left:1em;
+    list-style: none;
+    background: #dddddd;
+    color: #449d44;
+    text-align: center;
+}
+
+.sino-menus>li:hover,.sino-menus>li ul>li:hover,.sino-menus>li>.active{
+    background: #449d44;
+    color: white;
+}
+
+.sino-content>.tab-panel{
+    overflow: auto;
+}
+.sino-controller{
+    background: #66afe9;
+    border-bottom: 1px solid #00ff00;
+}

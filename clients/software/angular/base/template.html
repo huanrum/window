@@ -1,0 +1,118 @@
+<div id="angular.base">
+	<div class="angular-base" data-ng-controller="angularBaseController">
+		<input title="" ng-model="decimals">
+		<div>decimals{2} = {{decimals | number:2}}</div>
+		<div>
+			<div ng-if="decimals > 15">decimals &gt; 15</div>
+		</div>
+		<ul>
+			<li ng-repeat="item in items">
+				<a>{{liName + item}}</a>
+			</li>
+		</ul>
+		<!--div ng-include="/myTemplateName.html"
+		     ng-controller="angularBaseMyController"
+		     ng-init="name = 'World'">
+			Hello {{ name }}
+		</div-->
+		<div>
+			<input type="text" ng-model="personName" />
+			<div ng-switch="personName">
+				<p ng-switch-default>And the winner is</p>
+				<h1 ng-switch-when="Ari">{{ personName }}</h1>
+			</div>
+
+		</div>
+		<div ng-init="greeting='Hello'; person='World'">
+			{{greeting}} {{person}}
+		</div>
+		<div ng-init="greetingBind = 'Hello World'">
+			<p ng-bind="greetingBind"></p>
+		</div>
+		<div ng-init="greetingCloak = 'Hello World'">
+			<p ng-cloak>{{ greetingCloak }}</p>
+		</div>
+		<div>
+			<button ng-click="count = count + 1" ng-init="count=0">Increment</button>
+			count: {{count}}
+			<button ng-click="decrement()">Decrement</button>
+		</div>
+		<div>
+			<select ng-model="city" ng-options="city.name for city in cities">
+				<option value="">Choose City</option>
+			</select>
+			Best City: {{ city.name }}
+		</div>
+	</div>
+</div>
+<div id="angular.service">
+	<div class="angular-service" ng-controller="angularServiceController">
+		<div ng-repeat="item in items">
+			<h3>{{item.name}}</h3>
+			<div>{{item.content}}</div>
+		</div>
+	</div>
+</div>
+<div id="angular.controller">
+	<div class="angular-controller">
+		<div data-ng-controller="angularControllerController">
+			<input title="" data-ng-model="entity.text">
+			<h1>{{entity.text}}</h1>
+			<div ng-app ng-controller="MainController as main">
+				<input type="text" ng-model="main.name" />
+				<span>{{ main.name }}</span>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="angular.directive">
+	<div class="angular-directive">
+		<input title="" data-ng-model="myUrl">
+		<div angular-base-email-editor some-attr="{{myUrl}}" my-link-text="Click me to go to Google"></div>
+		<div sidebox title="Links">
+			<ul>
+				<li>First link</li>
+				<li>Second link</li>
+			</ul>
+		</div>
+		<div sidebox title="Properties">
+			<div>
+				<a href="" title="The $viewValue property holds onto the actual string value that’s updated in the view.">$viewValue</a>
+				<a href="" title="The $modelValue is the value held by the model. The $modelValue and the $viewValue can be different, depending upon the $parser pipeline.">$modelValue</a>
+				<a href="" title="">$parsers</a>
+				<a href="" title="The $formatters value is an array of functions that get executed as a pipeline when the model value changes. It is called on the way out of the $parser pipeline and is used to format and convert values to display within the bound control.">$formatters</a>
+				<a href="" title="The $viewChangeListeners value is an array of functions to execute when the view value has changed. Using $viewChangeListeners is a way to remove a $watch on a value yet retain similar behavior. These functions do not need to return a value, as they are ignored.">$viewChangeListeners</a>
+				<a href="" title="The $error value holds onto the object of errors where the key is the failed validation name and the value is the actual error message.">$error</a>
+				<a href="" title="The $pristine value is a boolean that tells us whether or not the user has made any changes to the control yet.">$pristine</a>
+				<a href="" title="The $dirty attribute value is the inverse of the $pristine value that tells us whether or not the user has interacted with the control.">$dirty</a>
+				<a href="" title="The $valid value tells us if there is no error on the control. It will be true if there are no errors and false if there are.">$valid</a>
+				<a href="" title="The $invalid value tells us whether or not there is at least one error on the control and is the inverse of the $valid value.">$invalid</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="angular.configuration">
+	<div class="angular-configuration" ng-controller="angularConfigurationController">
+		<div my-directive></div>
+		<div>
+			<h3>$location</h3>
+			<div ng-repeat="item in $locationItems">{{item.name}}:{{item.value}}</div>
+		</div>
+		<div>
+			<h3>$inject</h3>
+			<div ng-repeat="item in $injectItems">{{item.name}}:{{item.value}}</div>
+		</div>
+	</div>
+</div>
+<div id="angular.test">
+	<div class="angular-test" data-ng-controller="angularTestController">
+		<button ng-click="openFileDialog()">UpLoad File</button>
+		<div ng-repeat="upload in uploads" style="width: 96%;">
+			<span ng-bind="upload.message" style="display: inline-block;"></span>
+			<span ng-bind="upload.percentage + '%'" style="float: right;margin-right:5px;"></span>
+			<div style="border: 1px solid black;">
+				<div style="width:{{upload.percentage}}%;background: {{'#'+upload.percentage256+upload.percentage256+upload.percentage256}};">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+</div>

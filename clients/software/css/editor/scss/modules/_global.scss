@@ -1,0 +1,14 @@
+//sass style
+//-------------------------------
+$fontSize:      12px;
+$color:         #333;
+body{
+  $fontSize: 14px;
+  $color:   #fff !global;
+  font-size:$fontSize;
+  color:$color;
+}
+p{
+  font-size:$fontSize;
+  color:$color;
+}

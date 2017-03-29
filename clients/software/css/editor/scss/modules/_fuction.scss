@@ -1,0 +1,18 @@
+//sass style
+//-------------------------------
+$baseFontSize:      10px !default;
+$gray:              #ccc ;
+
+// pixels to rems
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+
+body{
+  font-size:$baseFontSize;
+  color:lighten($gray,10%);
+}
+.test{
+  font-size:pxToRem(16px);
+  color:darken($gray,10%);
+}

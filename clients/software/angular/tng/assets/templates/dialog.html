@@ -1,0 +1,13 @@
+<div class="cms-modal" tabindex="0">
+    <div class="cms-body form-dialog" sino-use-id="'dialog'+$id">
+        <div class="dialog-header {{option.class.header}}" ng-if="!!option.title">
+            <label class="{{option.class.icon}}">&nbsp;<span class="{{option.class.title}}">{{option.title |language}}</span></label>
+            <a class="close" ng-hide="option.hideClose" ng-click="$close(false)" sino-use-id="'close'">&times;</a>
+        </div>
+        <div class="dialog-section"></div>
+        <div class="dialog-footer" ng-if="actions && actions.length">
+            <a ng-repeat="action in actions" ng-click="action.fn()" class="btn weight-btn dialog-{{action.title}} {{action.class}}" ng-class="{'btn-disable':disable}" sino-use-id="action.title" tabindex="0">{{action.title|language }}</a>
+        </div>
+    </div>
+</div>
+

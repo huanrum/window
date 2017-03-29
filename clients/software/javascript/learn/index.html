@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Html5 Learn</title>
+
+	<style>
+		body>*{
+			margin: 2%;
+		}
+	</style>
+</head>
+<body>
+	<dialog id="dialog" style="z-index: 99;" draggable="true" >
+		<header style="background: #dddddd;">
+			<h3>Header</h3>
+			<button onclick="dialog.close()" style="float: right">&times;</button>
+			<nav>
+				<menu>
+					<li>A</li>
+					<li>B</li>
+					<li>C</li>
+				</menu>
+			</nav>
+		</header>
+		<article>
+			<section>this is a dialog !</section>
+			<aside>
+				<div for="rang.value"></div>
+				<input type="range" title="" id="rang">
+				<input type="time" title="">
+				<input pattern="[0-9a-z]{5}" title="">
+			</aside>
+		</article>
+		<footer style="background: #dddddd;">
+			<span>ehuanrun 20160405</span>
+		</footer>
+	</dialog>
+	<button onclick="dialog.show()">Show Dialog</button>
+	<time >
+		2012-12-12
+	</time>
+	<fieldset>
+		<legend>RGB</legend>
+		<div style="background: red;opacity: 0.5;border-radius: 50%;width: 200px;height: 200px;margin: 0 0 0 55px"></div>
+		<div style="background: green;opacity: 0.5;border-radius: 50%;width: 200px;height: 200px;margin: -110px 0 0 0"></div>
+		<div style="background: blue;opacity: 0.5;border-radius: 50%;width: 200px;height: 200px;margin: -200px 0 0 100px"></div>
+	</fieldset>
+</body>
+</html>

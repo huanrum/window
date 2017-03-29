@@ -1,0 +1,44 @@
+.ext-demo>*{
+    margin: 2%;
+}
+.ext-assembly>*{
+    margin: 2%;
+}
+
+.ext-element>*{
+    margin: 2%;
+}
+
+.ext-form>*{
+    margin: 2%;
+    display: inline-block;
+    float: left;
+}
+
+.ext-grid>*{
+    margin: 2%;
+    display: inline-block;
+    float: left;
+}
+
+.ext-tree>*{
+    margin: 2%;
+    display: inline-block;
+    float: left;
+}
+
+.ext-layout>*{
+    margin: 2%;
+    display: inline-block;
+    float: left;
+}
+
+.even-row{
+    background: #dddddd;
+}
+.odd-row{
+    background: #999999;
+}
+.selected-node{
+    font-weight: bold;
+}

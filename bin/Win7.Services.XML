@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Win7.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Win7.Services.SwaggerConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.SwaggerConfig.Register">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Win7.Services.Controllers.BaseController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.Controllers.BaseController.Urls(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="url"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.BaseController.SaveFile(Win7.Services.Model.FileEntity)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Win7.Services.Controllers.DataController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.Controllers.DataController.PostData(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Win7.Services.Controllers.DataController.PutData(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Win7.Services.Controllers.DataController.GetData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:Win7.Services.Controllers.LoginController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.Controllers.LoginController.Login(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.LoginController.GetFrient(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="seconds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.LoginController.Register(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.LoginController.DBData(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="sqls"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Win7.Services.LoginSoftwareController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.LoginSoftwareController.GetColumns">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.LoginSoftwareController.GetData(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.LoginSoftwareController.PostData(System.Collections.Generic.IEnumerable{Win7.Services.Win7UserSoftware})">
+            <summary>
+            
+            </summary>
+            <param name="userSoftwares"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.MessageController.Get(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="maxId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.MessageController.Post(Win7.Sqlite.BaseMessage)">
+            <summary>
+            
+            </summary>
+            <param name="bm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Win7.Services.Controllers.SoftWareController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.Controllers.SoftWareController.GetData">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.SoftWareController.GetColumns">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.SoftWareController.PostData(Win7.Services.Win7Software)">
+            <summary>
+            
+            </summary>
+            <param name="win7software"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.SoftWareController.SaveData(Win7.Services.Win7Software)">
+            <summary>
+            
+            </summary>
+            <param name="win7software"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Win7.Services.Controllers.SoftWareController.DeleteData(Win7.Services.Win7Software)">
+            <summary>
+            
+            </summary>
+            <param name="win7software"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Win7.Services.Model.DataModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.DataModel.IP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.DataModel.Method">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.DataModel.Data">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

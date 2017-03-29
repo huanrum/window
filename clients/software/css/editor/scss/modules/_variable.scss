@@ -1,0 +1,19 @@
+//sass style
+//-------------------------------
+$baseLineHeight:        2;
+$baseLineHeight:        1.5 !default;
+$borderDirection:       top !default;
+$baseFontSize:          12px !default;
+
+body{
+  line-height: $baseLineHeight;
+}
+
+//应用于class和属性
+.border-#{$borderDirection}{
+  border-#{$borderDirection}:1px solid #ccc;
+}
+//应用于复杂的属性值
+body{
+  font-size:$baseFontSize / $baseLineHeight;
+}

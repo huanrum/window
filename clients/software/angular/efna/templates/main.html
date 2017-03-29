@@ -1,0 +1,40 @@
+<div sino-some-manage ng-class="user.theme">
+    <div class="main-header">
+        <div class="title"><img src="style/images/logo.png"></div>
+        <div class="user">
+            <div class="right"><a class="fa fa-cog"  ng-click="setting('setting')" title="{{'setting' | language}}" sino-use-id="'setting'"></a></div>
+            <div class="right"><a class="fa fa-sign-out" ng-click="logout()" title="{{'logout' | language}}" sino-use-id="'logout'"></a></div>
+            <div class="right"><span>{{'hi'|language}},{{user.name}}</span></div>
+        </div>
+    </div>
+    <div class="main-content" ng-if="menuList.length">
+        <div class="main-menu">
+            <ul class="sidebar-menu list-style-none">
+                <li class="treeview" ng-repeat="menu in menuList" ng-class="{'active':menu.active && !menu.subMenus.length}"> <!--start here actually lol-->
+                    <div data-ng-click="clickMenu(menu)" sino-use-id="'menu-'+menu.url">
+                        <i ng-if="!menu.permission.icon" class="fa {{menu.class}}"></i><img ng-if="!!menu.permission.icon" ng-src="{{baseUrl+'/'+menu.permission.icon}}">
+                        <span>{{menu.url+'Menu'| language:menu.permission.name}}</span>
+                    </div>
+                    <ul class="sidebar-menu list-style-none" ng-show="menu.active">
+                        <li class="treeview" ng-repeat="sub in menu.subMenus" ng-class="{'active':sub.active}"> <!--start here actually lol-->
+                            <div data-ng-click="clickMenu(menu,sub)" sino-use-id="'menu-'+sub.url">
+                                <i ng-if="!sub.permission.icon" class="fa {{sub.class}}"></i><img ng-if="!!sub.permission.icon"  ng-src="{{baseUrl+'/'+sub.permission.icon}}">
+                                <span>{{sub.url+'Menu'| language:menu.permission.name}}</span>
+                            </div>
+                            <div class="tabs" ng-if="sub.active && sub.subMenus.length>1" >
+                                <a ng-repeat="subsub in sub.subMenus" class="btn btn-default" ng-class="{'active':subsub.active}" data-ng-click="clickMenu(menu,sub,subsub)"
+                                   sino-use-id="'menu-'+subsub.url">{{subsub.title| language:menu.permission.name}}</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div sino-splitter></div>
+        <div ui-view="mainContainer" class="main-details"></div>
+    </div>
+    <div class="main-content" ng-if="menuList && !menuList.length">
+        <div class="text-center font-size-2"><span>{{'noMenus'|language}}</span></div>
+    </div>
+    <div class="main-footer"></div>
+</div>

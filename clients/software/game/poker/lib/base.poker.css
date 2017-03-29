@@ -1,0 +1,14 @@
+.ehr-poker{
+    position: fixed;
+    width: 100px;
+    height: 150px;
+    border: 1px solid;
+    margin: 0.2em;
+    padding: 0.2em;
+    font-size: 1.5em;
+    background: #ffffff;
+}
+.ehr-poker .icon{
+    text-align: center;
+    font-size: 2em;
+}

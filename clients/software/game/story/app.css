@@ -1,0 +1,60 @@
+body{
+	height: 100%;
+}
+.active{
+	z-index:99;
+	outline: #333333 solid thick;
+	outline-offset: 0;
+}
+.ehr-controls-tooltip{
+	position : fixed;
+	padding : 1%;
+	background : #ffffff;
+	border : 1px solid #333333;
+}
+.book-menu{
+	display: inline-block;
+	margin: 1%;
+}
+.book-menu:hover{
+	text-underline: #333333;
+	cursor: pointer;
+	opacity: 0.8;
+	color: #99ff99;
+}
+.text-nav{
+	display: none;
+	position: fixed;
+	float: right;
+	width: 2em;
+	height: 9em;
+	top:12em;
+	right:6em;
+}
+.text-nav .text-nav-pre{
+	width: 0;
+	height: 0;
+	border-right: 1em solid transparent;
+	border-bottom: 3em solid #0e90d2;
+	border-left: 1em solid transparent;
+}
+.text-nav .text-nav-next{
+	width: 0;
+	height: 0;
+	border-right: 1em solid transparent;
+	border-top: 3em solid #0e90d2;
+	border-left: 1em solid transparent;
+}
+.text-nav .text-nav-text{
+	height: 33.3%;
+	width: calc(100% - 2px);
+	border: 1px solid #0e90d2;
+	text-align: center;
+	font-size: 1.5em;
+	transition: all 2s;
+}
+
+.text-nav .text-nav-text.onfocus{
+	width:9em;
+	margin-left:-4em;
+}

@@ -1,0 +1,86 @@
+<div sino-some-manage="logout" ng-class="{'min-menu':minMenu}" class="main-controller {{user.theme}}" sino-keypress="!">
+    <div class="main-left" sino-keypress="!">
+        <div class="menu-img">
+            <img src="assets/images/logo_2.png">
+        </div>
+        <div class="main-menu">
+            <ul class="sidebar-menu list-style-none">
+                <li class="treeview" ng-repeat="menu in menuList" ng-class="{'active':menu.active && !menu.subMenus.length}"> <!--start here actually lol-->
+                    <div data-ng-click="clickMenu(menu)" sino-use-id="'menu-'+menu.url" sino-keypress="V">
+                        <i ng-if="!menu.permission.icon" class="fa {{menu.class}}"></i><img ng-if="!!menu.permission.icon" ng-src="{{baseUrl+'/'+menu.permission.icon}}">
+                        <span>{{menu.url+'Menu'| language:menu.permission.name}}</span>
+                        <i ng-if="!!menu.subMenus.length"  class="right fa" ng-class="{'fa-caret-down':!menu.active,'fa-caret-up':menu.active}"></i>
+                    </div>
+                    <ul class="sidebar-menu list-style-none" ng-show="menu.active">
+                        <li class="treeview" ng-repeat="sub in menu.subMenus" ng-class="{'active':sub.active && !sub.subMenus.length}"> <!--start here actually lol-->
+                            <div data-ng-click="clickMenu(menu,sub)" sino-use-id="'menu-'+sub.url" sino-keypress="V">
+                                <i ng-if="!sub.permission.icon" class="fa {{sub.class}}"></i><img ng-if="!!sub.permission.icon"  ng-src="{{baseUrl+'/'+sub.permission.icon}}">
+                                <span>{{sub.url+'Menu'| language:menu.permission.name}}</span>
+                                <i ng-if="!!sub.subMenus.length"  class="right fa" ng-class="{'fa-caret-down':!sub.active,'fa-caret-up':sub.active}"></i>
+                                <i ng-if="!sub.subMenus.length" class="right fa" ng-class="{'fa-circle-o':!sub.active,'fa-circle':sub.active}"></i>
+                            </div>
+                            <ul class="sidebar-menu list-style-none" ng-if="sub.active && sub.subMenus.length" >
+                                <li class="treeview" ng-repeat="subsub in sub.subMenus" ng-class="{'active':subsub.active}"> <!--start here actually lol-->
+                                    <div data-ng-click="clickMenu(menu,sub,subsub)" sino-use-id="'menu-'+subsub.url" sino-keypress="V">
+                                        <i ng-if="!sub.permission.icon" class="fa {{sub.class}}"></i><img ng-if="!!sub.permission.icon"  ng-src="{{baseUrl+'/'+sub.permission.icon}}">
+                                        <span>&nbsp;-&nbsp;{{subsub.url+'Menu'| language:menu.permission.name}}</span>
+                                        <i class="right fa" ng-class="{'fa-circle-o':!subsub.active,'fa-circle':subsub.active}"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-right" sino-keypress="!">
+        <div class="main-header">
+            <div class="title">
+               <a class="fa fa-bars" ng-click="updateMinMenu()"></a>
+            </div>
+            <div class="user" ng-mouseenter="showSelf = true" ng-mouseleave="showSelf = false">
+                <a>
+                    <div class="right">
+                        <div>{{user.userName}}</div>
+                        <div>TNG Admin Mode</div>
+                    </div>
+                    <div class="right">
+                        <i class="fa fa-user-circle-o"></i>
+                    </div>
+                </a>
+                <div ng-show="showSelf" class="self-setting">
+                    <div class="text-center">
+                        <div class="triangle"></div>
+                    </div>
+                    <div class="content">
+                        <div><a class="fa fa-user-o" ng-click="showSelf=false;showMyProfile('myProfile')">{{'myProfile'|language}}</a></div>
+                        <div><a class="fa fa-unlock" ng-click="showSelf=false;changePassword('changePassword')">{{'changePassword'|language}}</a></div>
+                        <div><a class="fa fa-question-circle-o" ng-click="showSelf=false;helper()">{{'helper'|language}}</a></div>
+                        <div><a class="fa fa-sign-out" ng-click="showSelf=false;logout()">{{'logout'|language}}</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header-extend">
+            <div class="left">
+                <span class="active-menu">{{activeList[activeList.length-1].url+'Menu' | language}}</span>
+            </div>
+            <div class="list">
+                <span class="active-menu" ng-repeat="ac in activeList">
+                    <span ng-if="!$first">&gt;</span>
+                    <a class="color-dark" ng-click="updateMinMenu(false)">{{ac.url + 'Menu' | language}}</a>
+                </span>
+            </div>
+        </div>
+        <div class="main-content" ng-if="menuList.length">
+            <div ui-view="mainContainer" class="main-details"></div>
+        </div>
+        <div class="main-content" ng-if="menuList && !menuList.length">
+            <div class="text-center font-size-2"><span>{{'noMenus'|language}}</span></div>
+        </div>
+        <div class="main-footer">
+            <div class="version"><span>{{'versionLabel'| language}}</span><span>{{version}}</span></div>
+        </div>
+    </div>
+</div>

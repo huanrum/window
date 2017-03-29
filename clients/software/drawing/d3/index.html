@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>D3</title>
+
+	<link href="app.css" rel="stylesheet">
+	<script src="../../../../lib/other/d3.js"></script>
+	<script src="../../../../lib/other/ehr.js"></script>
+	<script src="d3.demo.js"></script>
+	<script src="d3.1.js"></script>
+	<script src="d3.2.js"></script>
+	<script>
+		window.addEventListener('load',window.$ehr.onReady([function Save(){
+			document.execCommand('saveAs','',d3.select('svg').node());
+		}]));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

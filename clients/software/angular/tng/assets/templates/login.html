@@ -1,0 +1,65 @@
+<div class="login-modal cms-modal">
+    <div class="cms-body">
+        <div class="text-center">
+            <img src="assets/images/logo.png">
+        </div>
+        <div class="login-content" ng-if="!reset && !forget" >
+            <div class="row font-weight">
+                <span>{{'loginId' | language}}</span>
+                <input type="text" ng-model="entity.loginId" placeholder="{{'email' | language}}"  ng-keydown="keydown($event)" sino-use-id>
+            </div>
+            <div class="row font-weight">
+                <span>{{'userPassword' | language}}</span>
+                <input type="password" ng-model="entity.password" placeholder="{{'userPassword' | language}}" ng-keydown="keydown($event)" sino-use-id>
+            </div>
+            <div class="row" ng-if="!!returnMessage">
+                <div class="error-icon">{{returnMessage.code | language:returnMessage.message}}</div>
+            </div>
+            <div class="row">
+                <button ng-repeat="action in actions" class="border1 btn {{action.class}} " ng-click="action.fn()" sino-use-id="action.title">{{action.title | language}}</button>
+            </div>
+            <div class="row row-bottom">
+                <a class="link" ng-click="forgetPassword(true)">{{'forgotPassword'| language}}</a>
+            </div>
+        </div>
+        <div class="login-content" ng-if="forget" >
+            <div class="row font-weight forgot-password">
+                <label >{{'loginId'| language}}</label>
+                <input type="text" ng-model="entity.loginId" placeholder="{{'email' | language}}"  ng-keydown="keydown($event)" sino-use-id>
+            </div>
+            <div class="row forgot-error" ng-if="!!returnError">
+                <div class="fa fa-exclamation-circle error-icon">{{returnError.message}}</div>
+            </div>
+            <div class="row forgot-error" ng-if="!!returnSuccess">
+                <div><i class="fa fa-check-circle"></i>{{'sendLink'| language:returnSuccess.message:returnSuccess.parameters}}</div>
+            </div>
+            <div class="row forgot-btn">
+                <button ng-click="resetLogin()" class="border1 btn ">{{'return'| language}}</button>
+                <button ng-click = "forgetPassword(false)" ng-disabled="btnDisabled" class="border1 btn btn-success" sino-use-id="action.title">{{'resetPassword'| language}}</button>
+            </div>
+        </div>
+        <div class="login-content" ng-if="reset" >
+            <div class="row font-weight">
+                <span>{{'newPassword' | language}}</span>
+                <input type="password" ng-class="{'validate-error':validaOne()}" ng-model="user.password" placeholder="{{'newPassword' | language}}" sino-use-id>
+            </div>
+            <div class="row row-sub-error" ng-show="showError">
+                <span ng-show="!!$error.newPassword" class="error-icon">{{$error.newPassword.message |language}}</span>
+            </div>
+            <div class="row font-weight">
+                <span>{{'rePassword' | language}}</span>
+                <input type="password" ng-class="{'validate-error':validaTwo()}" ng-model="user.repassword" placeholder="{{'rePassword' | language}}" sino-use-id>
+            </div>
+            <div class="row row-sub-error" ng-show="showError">
+                <span ng-show="!!$error.rePassword" class="error-icon">{{$error.rePassword.message |language}}</span>
+            </div>
+            <div class="row">
+                <a class="btn btn-success" ng-click="success()">{{'confirm'| language}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="cms-footer">
+        <div class="left">&copy;{{'copyright'| language}}</div>
+        <div class="right" title="{{compileDate}}">{{version}}</div>
+    </div>
+</div>

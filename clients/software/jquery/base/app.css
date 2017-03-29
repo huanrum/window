@@ -1,0 +1,120 @@
+.jquery-ui-select.ui-selectable p.ui-selecting{
+    color:red;
+}
+.jquery-ui-select.ui-selectable p.ui-selected{
+    background-color:gainsboro;
+}
+
+
+
+.horizontal{
+    float: left;
+    list-style: none;
+    margin: 10px;
+}
+.sub-level{
+    background: #cccccc;
+}
+.highlight{
+    color:#99ff99;
+}
+
+.jquery-event>input{
+    margin: 10px;
+}
+.jquery-event>span{
+    margin: 10px;
+    background: #998899;
+}
+.jquery-event>button{
+    margin: 10px;
+}
+
+.jquery-style>div{
+    padding: 10px;
+}
+.jquery-style>div>*{
+    margin: 5px;
+}
+
+.jquery-animation>*{
+    margin: 1%;
+}
+
+.jquery-ajax>*{
+    margin: 1%;
+}
+
+.jquery-advanced>*{
+    margin: 2%;
+}
+
+.jquery-ui>*[id]>*{
+    margin: 2%;
+}
+
+.jquery-ui .jquery-ui-drag>*{
+    border: 1px solid #99ff99;
+    padding: 5px;
+    background: #ddddff;
+}
+.jquery-ui .jquery-ui-drag>*:hover{
+    cursor: pointer;
+}
+
+.jquery-ui .jquery-ui-select{
+    border: 1px solid #99ff99;
+    padding: 5px;
+    background: #ddffff;
+}
+
+.jquery-ui .jquery-ui-permutation{
+    border: 1px solid #99ff99;
+    padding: 5px;
+    background: #ddffff;
+}
+
+.jquery-ui .jquery-ui-zoom{
+    border: 1px solid #99ff99;
+    padding: 5px;
+    background: #ddffff;
+}
+
+.jquery-wysiwyg>*{
+    margin: 5% 1%;
+}
+/* CSS for the font-name + font-size plugin */
+.wysiwyg-toolbar-list {
+    max-height: 16em;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.wysiwyg-toolbar-list a,
+.wysiwyg-toolbar-list a:link,
+.wysiwyg-toolbar-list a:visited {
+    display: block;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.wysiwyg-toolbar-list a:hover {
+    color: HighlightText;
+    background-color: Highlight;
+}
+/* CSS for the smiley plugin */
+.wysiwyg-toolbar-smilies {
+    padding: 10px;
+    text-align: center;
+    white-space: normal;
+}
+.wysiwyg-toolbar-smilies img {
+    display: -moz-inline-stack; /* inline-block: http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/ */
+    display: inline-block;
+    *display: inline;
+}
+.wysiwyg-toolbar-smilies img:hover{
+    background-color: Highlight;
+}
+

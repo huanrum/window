@@ -1,0 +1,1553 @@
+[
+  {
+    "name": "Admission",
+    "icon": "BE_navi_icon_admission_management.png",
+    "index": "m_Admission",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Service Plan",
+        "icon": "",
+        "index": "p_Service_Plan",
+        "link": "home.serviceplan",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Day Pass",
+        "icon": "",
+        "index": "P_Day_Pass",
+        "link": "home.daypass",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Temporary Pass",
+        "icon": "",
+        "index": "p_Temporary_Pass",
+        "link": "home.temporarypass",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      }
+    ],
+    "seq": 1
+  },
+  {
+    "name": "Membership",
+    "icon": "hkgta_main_page3_test_membership.png",
+    "index": "m_Membership",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Member Overview",
+        "icon": "",
+        "index": "p_Members_Overview",
+        "link": "home.memberoverview",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [
+          {
+            "name": "View",
+            "icon": "",
+            "index": "t_memberoverview_view",
+            "link": "home.memberoverview.view",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 1
+          },
+          {
+            "name": "Account Info",
+            "icon": "",
+            "index": "t_memberoverview_accountinfo",
+            "link": "home.memberoverview.accountinfo",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 2
+          },
+          {
+            "name": "Dependent Member",
+            "icon": "",
+            "index": "t_memberoverview_dependentmember",
+            "link": "home.memberoverview.dependentmember",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 3
+          },
+          {
+            "name": "Booking Records",
+            "icon": "",
+            "index": "t_memberoverview_bookingrecords",
+            "link": "home.memberoverview.bookingrecords",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 4
+          },
+          {
+            "name": "Training Records",
+            "icon": "",
+            "index": "t_memberoverview_trainingRecords",
+            "link": "home.memberoverview.trainingRecords",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 5
+          },
+          {
+            "name": "Transaction Expenses",
+            "icon": "",
+            "index": "t_memberoverview_transactionexpenses",
+            "link": "home.memberoverview.transactionexpenses",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 6
+          },
+          {
+            "name": "Cash Value Adjustment",
+            "icon": "",
+            "index": "t_memberoverview_cashvalueAdjustment",
+            "link": "home.memberoverview.cashvalueAdjustment",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 7
+          }
+        ],
+        "seq": 1
+      },
+      {
+        "name": "Membership Due",
+        "icon": "",
+        "index": "p_Membership_Due",
+        "link": "home.membership",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Enrollment Settlement",
+        "icon": "",
+        "index": "p_Enrollment_Settlement",
+        "link": "home.enrollment",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Top up Settlement",
+        "icon": "",
+        "index": "p_Wellness_TopUpSettlement",
+        "link": "home.wellnessTopUpSettlement",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Customer Transfer",
+        "icon": "",
+        "index": "p_Customer_Transfer",
+        "link": "home.customer_transfer",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      }
+    ],
+    "seq": 2
+  },
+  {
+    "name": "Sales Kit",
+    "icon": "hkgta_main_page3_test_sales.png",
+    "index": "m_Sales_Kit",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Presentation Archive",
+        "icon": "",
+        "index": "p_Presentation_Archive",
+        "link": "home.archive",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      }
+    ],
+    "seq": 3
+  },
+  {
+    "name": "Template",
+    "icon": "hkgta_main_page3_test_template.png",
+    "index": "m_Template",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Golfing Bay",
+        "icon": "",
+        "index": "p_Golfing Bay_Template",
+        "link": "home.golfingBayTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Tennis Court",
+        "icon": "",
+        "index": "p_Tennis Court_Template",
+        "link": "home.tennisCourtTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Golfing Private Coaching",
+        "icon": "",
+        "index": "p_Golfing Private Coaching_Template",
+        "link": "home.golfingPrivateCoachingTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Tennis Private Coaching",
+        "icon": "",
+        "index": "p_Tennis Private Coaching_Template",
+        "link": "home.tennisPrivateCoachingTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Golf Course",
+        "icon": "",
+        "index": "p_Golf Courses_Template",
+        "link": "home.golfCoursesTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      },
+      {
+        "name": "Tennis Course",
+        "icon": "",
+        "index": "p_Tennis Courses_Template",
+        "link": "home.tennisCoursesTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 6
+      },
+      {
+        "name": "Enrollment",
+        "icon": "",
+        "index": "p_Enrollment",
+        "link": "home.enrollmentTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 7
+      },
+      {
+        "name": "Staff",
+        "icon": "",
+        "index": "p_Staff",
+        "link": "home.staffTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 8
+      },
+      {
+        "name": "Accounting",
+        "icon": "",
+        "index": "p_Accounting",
+        "link": "home.refundTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 9
+      },
+      {
+        "name": "Member Account",
+        "icon": "",
+        "index": "p_Member Account",
+        "link": "home.accountTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 10
+      },
+      {
+        "name": "Housekeeping",
+        "icon": "",
+        "index": "p_House_Keeping",
+        "link": "home.housekeepingTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 11
+      },
+      {
+        "name": "Day Pass",
+        "icon": "",
+        "index": "p_Day_Pass_Template",
+        "link": "home.dayPassTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 12
+      },
+      {
+        "name": "Restaurant",
+        "icon": "",
+        "index": "p_Restaurant_Template",
+        "link": "home.restaurantTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 13
+      },
+      {
+        "name": "Guest Room Reservation",
+        "icon": "",
+        "index": "p_Guest_Room_Reservation",
+        "link": "home.guestRoomReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 14
+      },
+      {
+        "name": "Corporate Account",
+        "icon": "",
+        "index": "p_Corporate_Account_Template",
+        "link": "home.corporateAccountTM",
+        "type": "p",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 15
+      },
+      {
+        "name": "Wellness",
+        "icon": "",
+        "index": "p_Wellness_Template",
+        "link": "home.wellnessTM",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 16
+      }
+    ],
+    "seq": 4
+  },
+  {
+    "name": "Card",
+    "icon": "hkgta_main_page3_test_card.png",
+    "index": "m_Card",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Academy Card",
+        "icon": "",
+        "index": "p_Academy_Card",
+        "link": "home.cardmanage",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Day Pass",
+        "icon": "",
+        "index": "P_Day_Pass_Card",
+        "link": "home.cmdaypass",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Temporary Pass",
+        "icon": "",
+        "index": "p_Temporary_Pass_Card",
+        "link": "home.temppass",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      }
+    ],
+    "seq": 5
+  },
+  {
+    "name": "Corporate",
+    "icon": "hkgta_main_page3_test_coporate.png",
+    "index": "m_Corporate",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Accounts Overview",
+        "icon": "",
+        "index": "p_Corporate_Accounts",
+        "link": "home.corporate",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Members Overview",
+        "icon": "",
+        "index": "p_Corporate_Members",
+        "link": "home.corporateMember",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Membership Due",
+        "icon": "",
+        "index": "t_Coporate_Membership_Due",
+        "link": "home.corporateMembershipDue",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Enrollment Settlement",
+        "icon": "",
+        "index": "t_Corporate_Enrollment_Settlement",
+        "link": "home.corporateEnrollmentSettlement",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Spending Summary",
+        "icon": "",
+        "index": "p_Spending_Summary",
+        "link": "home.spendingSummary",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      }
+    ],
+    "seq": 6
+  },
+  {
+    "name": "Facility",
+    "icon": "hkgta_main_page3_test_facility.png",
+    "index": "m_Facility",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Golfing Bay",
+        "icon": "",
+        "index": "p_Golfing_Bay",
+        "link": "home.golfOverview",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [
+          {
+            "name": "Golf Status Overview",
+            "icon": "",
+            "index": "t_Golf_Status_Overview",
+            "link": "home.golfOverview",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 1
+          },
+          {
+            "name": "Golf Ball Feeding Control",
+            "icon": "",
+            "index": "t_Ball_Feeding_Control",
+            "link": "home.golfBallFeeding",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 2
+          },
+          {
+            "name": "Golf General Setting",
+            "icon": "",
+            "index": "t_Golf_General_Setting",
+            "link": "home.golfGeneralSetting",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 3
+          },
+          {
+            "name": "Golf Default Rates",
+            "icon": "",
+            "index": "t_Golf_Default_Rates",
+            "link": "home.golfDefaultRates",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 4
+          },
+          {
+            "name": "Golf Special Rates",
+            "icon": "",
+            "index": "t_Golf_Special_Rates",
+            "link": "home.golfSpecialRates",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 5
+          }
+        ],
+        "seq": 1
+      },
+      {
+        "name": "Tennis Court",
+        "icon": "",
+        "index": "p_Tennis_Court",
+        "link": "home.tennisOverview",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [
+          {
+            "name": "Tennis Status Overview",
+            "icon": "",
+            "index": "t_Tennis_Status_Overview",
+            "link": "home.tennisOverview",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 1
+          },
+          {
+            "name": "Tennis General Setting",
+            "icon": "",
+            "index": "t_Tennis_General_Setting",
+            "link": "home.tennisGeneralSetting",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 2
+          },
+          {
+            "name": "Tennis Default Rates",
+            "icon": "",
+            "index": "t_Tennis_Default_Rates",
+            "link": "home.tennisDefaultRates",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 3
+          },
+          {
+            "name": "Tennis Special Rates",
+            "icon": "",
+            "index": "t_Tennis_Special_Rates",
+            "link": "home.tennisSpecialRates",
+            "type": "T",
+            "accessRight": "*",
+            "submenu": [],
+            "seq": 4
+          }
+        ],
+        "seq": 2
+      }
+    ],
+    "seq": 7
+  },
+  {
+    "name": "Staff",
+    "icon": "hkgta_main_page3_test_staff_o.png",
+    "index": "m_Staff",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Staff Overview",
+        "icon": "",
+        "index": "p_Staff_Overview",
+        "link": "home.staffinfo",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Staff Card",
+        "icon": "",
+        "index": "p_Staff_Card",
+        "link": "home.staffcard",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      }
+    ],
+    "seq": 8
+  },
+  {
+    "name": "School",
+    "icon": "school.png",
+    "index": "m_School",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Private Coaching - Golf",
+        "icon": "",
+        "index": "p_Private_Coaching_Golf",
+        "link": "home.privateCoachingGolf",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Private Coaching - Tennis",
+        "icon": "",
+        "index": "p_Private_Coaching_Tennis",
+        "link": "home.privateCoachingTennis",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Golf Course",
+        "icon": "",
+        "index": "p_Golf_Courses",
+        "link": "home.courses",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Tennis Course",
+        "icon": "",
+        "index": "p_Tennis_Courses",
+        "link": "home.coursesTennis",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Coach Management - Golf",
+        "icon": "",
+        "index": "p_Golf_Coaches",
+        "link": "home.staffinfo_golf_coaches",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      },
+      {
+        "name": "Coach Management - Tennis",
+        "icon": "",
+        "index": "p_Tennis_Coaches",
+        "link": "home.staffinfo_tennis_coaches",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 6
+      },
+      {
+        "name": "Golf Training Calendar",
+        "icon": "",
+        "index": "p_Golf_Training_Calendar",
+        "link": "home.golfTrainingCalendar",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 7
+      },
+      {
+        "name": "Tennis Training Calendar",
+        "icon": "",
+        "index": "p_Tennis_Training_Calendar",
+        "link": "home.tennisTrainingCalendar",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 8
+      }
+    ],
+    "seq": 9
+  },
+  {
+    "name": "Reservation",
+    "icon": "hkgta_main_page3_test_reservation_o.png",
+    "index": "m_Reservation",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Golfing Bay",
+        "icon": "",
+        "index": "p_Golfing Bay",
+        "link": "home.golfReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Tennis Court",
+        "icon": "",
+        "index": "p_Tennis Court",
+        "link": "home.tennisReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Golf Course",
+        "icon": "",
+        "index": "p_Golf Courses",
+        "link": "home.courseReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Wellness Center",
+        "icon": "",
+        "index": "p_Wellness Center",
+        "link": "home.wellnessCenter",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Tennis Course",
+        "icon": "",
+        "index": "p_Tennis Courses",
+        "link": "home.courseTennisReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      },
+      {
+        "name": "Golf Private Coaching",
+        "icon": "",
+        "index": "p_Golf Private Coaching",
+        "link": "home.golfCoachingReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 6
+      },
+      {
+        "name": "Tennis Private Coaching",
+        "icon": "",
+        "index": "p_Tennis Private Coaching",
+        "link": "home.tennisCoachingReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 7
+      },
+      {
+        "name": "Restaurant",
+        "icon": "",
+        "index": "p_Restaurant",
+        "link": "home.restaurantReservation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 8
+      },
+      {
+        "name": "Guest Room",
+        "icon": "",
+        "index": "p_Guest Room",
+        "link": "home.reservationGuestroom",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 9
+      }
+    ],
+    "seq": 10
+  },
+  {
+    "name": "S-beacon",
+    "icon": "hkgta_main_page3_test_beancon.png",
+    "index": "m_S_beacon",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Member",
+        "icon": "",
+        "index": "p_Member_Recognition",
+        "link": "home.beacon",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Housekeeper",
+        "icon": "",
+        "index": "p_Housekeep_Recognition",
+        "link": "home.housekeepBeacon",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      }
+    ],
+    "seq": 11
+  },
+  {
+    "name": "Cash Value",
+    "icon": "hkgta_main_page3_test_card.png",
+    "index": "m_Refund",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Service Refund",
+        "icon": "",
+        "index": "p_Service",
+        "link": "home.refundManagement",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Cash Value Refund",
+        "icon": "",
+        "index": "p_Cash Value",
+        "link": "home.cashValuePed",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Cash Value Adjustment",
+        "icon": "",
+        "index": "p_Cash_Value_Revision",
+        "link": "home.CashValueRevision",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      }
+    ],
+    "seq": 12
+  },
+  {
+    "name": "Restaurant",
+    "icon": "hkgta_menu_icons_Restaurant_gold.png",
+    "index": "m_Restaurant",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "All Day Dining",
+        "icon": "",
+        "index": "p_Restaurant_1",
+        "link": "home.restaurant0001",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Bar & Lounge",
+        "icon": "",
+        "index": "p_Restaurant_2",
+        "link": "home.restaurant0002",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Chinese Restaurant",
+        "icon": "",
+        "index": "p_Restaurant_3",
+        "link": "home.restaurant0003",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Sakti Dining",
+        "icon": "",
+        "index": "p_Restaurant_4",
+        "link": "home.restaurant0004",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Royal Tea Lounge",
+        "icon": "",
+        "index": "p_Restaurant_5",
+        "link": "home.restaurant0005",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      }
+    ],
+    "seq": 13
+  },
+  {
+    "name": "Housekeeping",
+    "icon": "hkgta_main_page3_test_housekeep.png",
+    "index": "m_Housekeep",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Guest Request",
+        "icon": "",
+        "index": "p_Guest Request",
+        "link": "home.housekeep",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Overview",
+        "icon": "",
+        "index": "p_Overview",
+        "link": "home.housekeepOverview",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Roster",
+        "icon": "",
+        "index": "p_Roster",
+        "link": "home.housekeepRoster",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Room Assignment",
+        "icon": "",
+        "index": "p_Room Assignment",
+        "link": "home.housekeepRoomAssignment",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Setting",
+        "icon": "",
+        "index": "p_Setting",
+        "link": "home.housekeepSettingAdhocRespTime",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      }
+    ],
+    "seq": 14
+  },
+  {
+    "name": "Report",
+    "icon": "BE_navi_icon_admission_management.png",
+    "index": "m_Sales_Report",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Overview",
+        "icon": "",
+        "index": "m_salesreport_overview",
+        "link": "home.salesReport",
+        "type": "M",
+        "accessRight": "*",
+        "submenu": [
+          {
+            "name": "Transaction",
+            "icon": "",
+            "index": "c_transaction",
+            "link": "",
+            "type": "M",
+            "accessRight": "*",
+            "submenu": [
+              {
+                "name": "Source of Booking",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Source_Booking",
+                "link": "home.salesReport.sourceBooking",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 1
+              }
+            ],
+            "seq": 1
+          },
+          {
+            "name": "Enrollment",
+            "icon": "",
+            "index": "c_enrollment",
+            "link": "",
+            "type": "M",
+            "accessRight": "*",
+            "submenu": [
+              {
+                "name": "Monthly Enrollment reports",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_month_enrollment_rpt",
+                "link": "home.salesReport.monthEnrollmentRep",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 1
+              },
+              {
+                "name": "Enrollment & Renewal",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_enrollment_renewal",
+                "link": "home.salesReport.enrollRenewalRep",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 2
+              },
+              {
+                "name": "Daily Patron Acquisition",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Daily_Patron_Acquisition",
+                "link": "home.salesReport.dailyPatronAcquisition",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 3
+              },
+              {
+                "name": "Daily Newly Lead",
+                "icon": "BE_navi_icon_imimission_management.png",
+                "index": "r_Daily_Leads",
+                "link": "home.salesReport.dailyLeads",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 4
+              }
+            ],
+            "seq": 2
+          },
+          {
+            "name": "Facility Booking",
+            "icon": "",
+            "index": "c_facility_booking",
+            "link": "",
+            "type": "M",
+            "accessRight": "*",
+            "submenu": [
+              {
+                "name": "Daily Facility Usage",
+                "icon": "BE_navi_icon_imimission_management.png",
+                "index": "r_daily_facility",
+                "link": "home.salesReport.dailyFacility",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 1
+              },
+              {
+                "name": "Monthly Facility Usage",
+                "icon": "BE_navi_icon_imimission_management.png",
+                "index": "r_monthly_facility",
+                "link": "home.salesReport.monthlyFacility",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 2
+              },
+              {
+                "name": "Daily Day Pass Usage",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Daily_Daypass",
+                "link": "home.salesReport.dailyDaypass",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 3
+              }
+            ],
+            "seq": 3
+          },
+          {
+            "name": "School",
+            "icon": "",
+            "index": "c_school",
+            "link": "",
+            "type": "M",
+            "accessRight": "*",
+            "submenu": [
+              {
+                "name": "Coach Training Report",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Coach_Training_Report",
+                "link": "home.salesReport.coachTrainingReport",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 1
+              },
+              {
+                "name": "Daily Private Coaching",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Daily_Private_Coaching",
+                "link": "home.salesReport.dailyPrivateCoaching",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 2
+              },
+              {
+                "name": "Golf and Tennis coaches performance",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Golf_Tennis_Coaches_Performance",
+                "link": "home.salesReport.golfTennisCoachesPerformance",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 3
+              },
+              {
+                "name": "Monthly Course Completion",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Monthly_Course_Completion",
+                "link": "home.salesReport.monthlyCourseCompletion",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 4
+              },
+              {
+                "name": "Monthly Course Revenue",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Monthly_Course_Revenue",
+                "link": "home.salesReport.monthlyCourseRevenue",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 5
+              },
+              {
+                "name": "Monthly Private Coaching Revenue",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Monthly_Private_Coaching_Revenue",
+                "link": "home.salesReport.monthlyPrivateCoachingRevenue",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 6
+              }
+            ],
+            "seq": 4
+          },
+          {
+            "name": "Housekeeping",
+            "icon": "",
+            "index": "c_housekeeping",
+            "link": "",
+            "type": "M",
+            "accessRight": "*",
+            "submenu": [
+              {
+                "name": "Ad Hoc Task",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Ad_Hoc_Task",
+                "link": "home.salesReport.adHocTask",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 1
+              },
+              {
+                "name": "Maintenance Task",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Maintenance_Task",
+                "link": "home.salesReport.maintenanceTask",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 2
+              },
+              {
+                "name": "Room Assignment",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Room_Assignment",
+                "link": "home.salesReport.roomAssignment",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 3
+              },
+              {
+                "name": "Room Attendant 7 Days Roster",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Room_Attendent_Seven_Days_Roste",
+                "link": "home.salesReport.Room_attendentSevenDaysRoste",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 4
+              },
+              {
+                "name": "Routine Task",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Routine_Task",
+                "link": "home.salesReport.routineTask",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 5
+              },
+              {
+                "name": "Schedule Task",
+                "icon": "BE_navi_icon_admission_management.png",
+                "index": "r_Schedule_Task",
+                "link": "home.salesReport.scheduleTask",
+                "type": "R",
+                "accessRight": "*",
+                "submenu": [],
+                "seq": 6
+              }
+            ],
+            "seq": 5
+          }
+        ],
+        "seq": 1
+      }
+    ],
+    "seq": 16
+  },
+  {
+    "name": "Guest Room",
+    "icon": "hkgta_menu_icons_User&Role_gold.png",
+    "index": "m_Guestroom",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "On-line Guest Room",
+        "icon": "",
+        "index": "p_Online_Guestrooms",
+        "link": "home.guestroom",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Silent Check-in",
+        "icon": "",
+        "index": "p_Silent_Check-in",
+        "link": "home.Silent_Check-in",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      }
+    ],
+    "seq": 17
+  },
+  {
+    "name": "Wellness",
+    "icon": "",
+    "index": "m_Wellness",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Information",
+        "icon": "",
+        "index": "p_Wellness_Information",
+        "link": "home.wellnessGeneralSetting",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Consultations",
+        "icon": "",
+        "index": "p_Wellness_Consultations",
+        "link": "home.wellnessConsultations",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Specials",
+        "icon": "",
+        "index": "p_Wellness_Specials",
+        "link": "home.wellnessSpecials",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Wellness Days",
+        "icon": "",
+        "index": "p_Wellness_Days",
+        "link": "home.wellnessDays",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Wellness Stays",
+        "icon": "",
+        "index": "p_Wellness_Stays",
+        "link": "home.wellnessStays",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      },
+      {
+        "name": "Refund Confirmation",
+        "icon": "",
+        "index": "p_Wellness_Refund_Confirmation",
+        "link": "home.wellnessRefundConfirmation",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 6
+      }
+    ],
+    "seq": 18
+  },
+  {
+    "name": "Statement",
+    "icon": "",
+    "index": "m_Statement",
+    "link": "home.statement",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Monthly Statement",
+        "icon": "",
+        "index": "p_Monthly_Statement",
+        "link": "home.statement",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Delivery Record",
+        "icon": "",
+        "index": "p_Delivery_Record",
+        "link": "home.deliveryRecord",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      }
+    ],
+    "seq": 19
+  },
+  {
+    "name": "Notification Center",
+    "icon": "hkgta_main_page3_test_beancon.png",
+    "index": "m_Notification_Center",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Push Center",
+        "icon": "",
+        "index": "p_Notification_Center",
+        "link": "home.notificationCenter",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      }
+    ],
+    "seq": 20
+  },
+  {
+    "name": "Publication",
+    "icon": "",
+    "index": "m_Publication",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Banner Ads",
+        "icon": "",
+        "index": "p_BannerAds",
+        "link": "home.publicationBannerAds",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "News",
+        "icon": "",
+        "index": "p_News",
+        "link": "home.publicationNews",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      }
+    ],
+    "seq": 21
+  },
+  {
+    "name": "BI Dashboard",
+    "icon": "hkgta_main_page3_test_card.png",
+    "index": "m_BI_DashBoard",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Admission Reports",
+        "icon": "",
+        "index": "p_Admission_Reports",
+        "link": "home.admissionReport",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      },
+      {
+        "name": "Patron Analysis",
+        "icon": "",
+        "index": "p_Patron_Analysis",
+        "link": "home.patronAnalysis",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 2
+      },
+      {
+        "name": "Budgetary Monitor",
+        "icon": "",
+        "index": "p_Budgetary_Monitor",
+        "link": "home.budgetaryMonitor",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 3
+      },
+      {
+        "name": "Revenue Reports",
+        "icon": "",
+        "index": "p_Revenue_Reports",
+        "link": "home.revenueReports",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 4
+      },
+      {
+        "name": "Facilities Occupancy",
+        "icon": "",
+        "index": "p_Facilities_Occupancy",
+        "link": "home.facilityOccupancy",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 5
+      }
+    ],
+    "seq": 22
+  },
+  {
+    "name": "Direct Marketing",
+    "icon": "",
+    "index": "m_Direct_Marketing",
+    "link": "",
+    "type": "M",
+    "accessRight": "*",
+    "submenu": [
+      {
+        "name": "Overview",
+        "icon": "",
+        "index": "p_Direct_Marketing_Overview",
+        "link": "home.direct_marketing_overview",
+        "type": "P",
+        "accessRight": "*",
+        "submenu": [],
+        "seq": 1
+      }
+    ],
+    "seq": 23
+  }
+]

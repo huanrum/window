@@ -1,0 +1,22 @@
+.analyze-month-content{
+    width: 100%;
+}
+.analyze-month-content>*{
+    cursor :pointer;
+    margin :0.1em 1em;
+    color :#ffffff;
+}
+.analyze-month-content>*>*{
+    display:inline-block;
+    margin:auto 1em;
+    height :1em;
+}
+.analyze-day-content{
+    margin: 4em 1em;
+}
+.analyze-day-content>*{
+    display :inline-block;
+   cursor:pointer;
+   margin :0.1em 0.5em;
+   color :#ffffff;
+}

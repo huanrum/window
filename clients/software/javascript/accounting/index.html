@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Accounting</title>
+    <link rel="icon" href="../../../../icons/desktop/accounting.png">
+    <link href="../../../../lib/other/ehr.css" rel="stylesheet">
+    <link href="../../../../lib/other/font-flicker.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+
+    <script src="../../../../lib/other/ehr.js"></script>
+    <script src="index.js"></script>
+    <!--<script src="functions/home.js"></script>-->
+    <!--<script src="functions/history.js"></script>-->
+    <!--<script src="functions/analyze.js"></script>-->
+    <!--<script src="functions/income.js"></script>-->
+    <!--<script src="functions/reconciliation.js"></script>-->
+    <script src="functions/phone.js"></script>
+    <script>
+        if(window.$ehr.isPc){
+            window.$ehr.each('home,history,analyze,income,reconciliation'.split(','),function(file){
+                var el = document.createElement('script');
+                el.src = 'functions/'+file+'.js';
+                window.document.head.appendChild(el);
+            });
+        }
+        window.addEventListener('load',window.$ehr.onReady(true,0,{translate:'../../../../account/gettranslate',user:'../../../../account/getuser',login:'../../../../account/login'},1000));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

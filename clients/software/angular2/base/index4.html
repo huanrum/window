@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS2 - Router</title>
+
+    <script src="../../../../lib/angular2/system@0.16.11.js"></script>
+    <script src="../../../../lib/angular2/angular2.dev.js"></script>
+    <script src="../../../../lib/angular2/router.dev.js"></script>
+    <script src="system.config.js"></script>
+</head>
+<body>
+<!--组件渲染锚点-->
+<ez-app></ez-app>
+<!--定义一个ES6脚本元素-->
+<script type="module">
+    import {Inject,Component,View,bootstrap} from "angular2/angular2";
+    import {LocationStrategy,RouteConfig,RouterOutlet,Router,routerInjectables} from "angular2/router";
+
+    //EzApp组件
+    @Component({selector:"ez-app"})
+    @View({
+        directives:[RouterOutlet],
+        template : `
+                <nav>
+                    <b (click)="go('/video')">video</b> |
+                    <b (click)="go('/music')">music</b> |
+                    <b (click)="go('/sport')">sport</b>
+                </nav>
+                <main>
+                    <router-outlet></router-outlet>
+                </main>
+                `
+        })
+        //路由配置注解
+        @RouteConfig([
+            {path:"/video", component:EzVideo},
+            {path:"/music", component:EzMusic},
+            {path:"/sport", component:EzSport}
+        ])
+        class EzApp{
+        	//注入路由器对象：Router
+        	constructor(@Inject(Router) rt,@Inject(LocationStrategy) ls){
+                ls.pushState = function(){};
+                this.router = rt;
+            }
+            go(path){
+            	//根据给定的url，选中组件并在outlet中激活
+            	this.router.navigate(path);
+            }
+        }
+
+        //EzVideo组件
+        @Component({selector:"ez-video"})
+		@View({
+        	template : `
+            <h1>I LOVE THIS VIDEO!</h1>
+            `
+        })
+        class EzVideo{}
+
+        //EzMusic组件
+        @Component({selector:"ez-music"})
+        @View({
+        	template : `
+            <h1>THAT'S FANTASTIC MUSIC!</h1>
+            `
+        })
+        class EzMusic{}
+
+        //EzSport组件
+        @Component({selector:"ez-sport"})
+        @View({
+        	template : `
+            <h1>THAT'S SPORT!</h1>
+            `
+        })
+        class EzSport{}
+
+        bootstrap(EzApp,[routerInjectables]);
+</script>
+</body>
+</html>

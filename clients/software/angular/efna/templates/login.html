@@ -1,0 +1,31 @@
+<div class="login-modal cms-modal">
+    <form class="cms-body">
+        <div class="text-center">
+            <img src="style/images/logo.png">
+        </div>
+        <div class="row-top"></div>
+        <div class="row background-fcfcfc"><span>{{'adminLogin' | language}}</span></div>
+        <div class="row background-fcfcfc">
+            <!--<label>{{'userName' | language}}</label>-->
+            <input type="text" ng-model="user.username" placeholder="{{'userName' | language}}" sino-use-id>
+        </div>
+        <div class="row background-fcfcfc" >
+            <!--<label>{{'userPassword' | language}}</label>-->
+            <input type="password" ng-model="user.password" placeholder="{{'userPassword' | language}}" sino-use-id>
+        </div>
+
+        <div class="row background-fcfcfc" ng-if="false">
+        </div>
+        <div class="row background-fcfcfc" ng-if="!!returnMessage">
+            <span>&nbsp;</span>
+            <span class="error-icon">{{returnMessage}}</span>
+        </div>
+        <div class="row background-fcfcfc" ng-if="!!returnMessage">
+        </div>
+        <div class="row background-fcfcfc">
+            <button ng-repeat="action in actions" class="btn {{action.class}} " ng-click="action.fn()" sino-use-id="action.title">{{action.title | language}}</button>
+        </div>
+        <div class="row"></div>
+    </form>
+    <div class="version"><span>{{'versionLabel'| language}}</span><span>{{version}}</span></div>
+</div>

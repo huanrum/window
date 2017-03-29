@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SASS</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=3, minimum-scale=0.5" />
+    <style>
+        .cms-modal{
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            z-index:99;
+        }
+        .cms-body{
+            position: fixed;
+            top:50%;
+            margin-left: 50%;
+            transform: translate(-50%,-50%);
+            background:rgba(200,200,200,0.6);
+        }
+    </style>
+    <link href="scss/modules.css" rel="stylesheet">
+    <link href="test/modules.css" rel="stylesheet">
+
+    <script src="../../../../lib/jquery/jquery-2.1.0.js"></script>
+    <script src="../../../../lib/jquery/jquery-migrate.js"></script>
+    <script src="../../../../lib/jquery/jquery-ui.js"></script>
+    <script src="../../../../lib/other/ehr.js"></script>
+    <script>
+        window.jQuery(window.$ehr.onReady(-1));
+    </script>
+</head>
+<body class="cms-modal">
+    <div class="cms-body">
+        <div class="fakeshadow" style="width: 40em;height: 30em;" id="pattern"></div>
+    </div>
+</body>
+</html>

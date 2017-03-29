@@ -1,0 +1,127 @@
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #c0ae92;
+	-webkit-border-radius: 4px;
+	outline: #fff solid 2px;
+	outline-offset: -2px;
+	border: 2px solid #fff;
+}
+::-webkit-scrollbar-track-piece {
+	background-color: #fff;
+	-webkit-border-radius: 0;
+}
+
+.btn-close:hover{
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.ehr-alert{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(123,123,123,0.6);
+}
+.ehr-alert button{
+	margin:10px;
+}
+.ehr-alert .btn-close{
+	display: inline-block;
+	padding: 1px 2px;
+	border-radius : 50%;
+	border: 1px solid #dddddd;
+	color:#ffffff;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.ehr-alert .btn-close:hover{
+	opacity: 0.6;
+	cursor: pointer;
+}
+.ehr-alert>*{
+	position: absolute;
+	margin-left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	padding : 2px;
+	border-radius : 10px;
+}
+
+.navigator-button{
+	float: right;
+	margin: auto 5px;
+	width: 20px;
+	height:20px;
+	background:url(../../icons/bar/gotoG.png) no-repeat;
+	background-size: 20px 20px;
+}
+.navigator-button:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.ehr-controls-tooltip{
+	position : fixed;
+	padding : 1%;
+	background : #ffffff;
+	border : 1px solid #333333;
+}
+
+.ehr-grid{
+	border : 1px solid #333333;
+}
+.ehr-grid.root-grid-data{
+	position: absolute;
+	margin-left: 50%;
+	top: 50%;
+	background: #ffffff;
+	transform:translate(-50%,-50%);
+
+	outline: 5px solid #ffffff;
+	outline-offset:5px;
+}
+.ehr-grid .ehr-grid-header{
+	font-weight : bold;
+	border-bottom : 1px solid #333333;
+	background : #333399;
+	color : #ffffff;
+}
+.ehr-grid .ehr-grid-header>div{
+	display : inline-block;
+	border : 1px solid #999999;
+	font-size : 1.5em;
+	text-align : center;
+}
+.ehr-grid .ehr-grid-content{
+	overflow-x : auto;
+}
+.ehr-grid .ehr-grid-content .ehr-grid-cell{
+	height : 100%;
+	display : inline-block;
+	border : 1px solid #999999;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	text-align: center;
+}
+.ehr-grid .ehr-grid-content .ehr-grid-row:nth-child(odd){
+	background: #dddddd;
+}
+.ehr-grid .ehr-grid-content .ehr-grid-row.active{
+	background: #aaaaff;
+	color:#ffffff;
+}
+
+.select-menu>*{
+	margin: 0.1em;
+	border-bottom: 1px solid #99ff99;
+	text-align: center;
+}
+.select-menu>*:hover{
+	cursor: pointer;
+	color: white;
+}

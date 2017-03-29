@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS2 - Service</title>
+
+    <script src="../../../../lib/angular2/system@0.16.11.js"></script>
+    <script src="../../../../lib/angular2/angular2.dev.js"></script>
+    <script src="system.config.js"></script>
+</head>
+<body>
+<!--组件渲染锚点-->
+<ez-app></ez-app>
+<!--定义一个ES6脚本元素-->
+<script type="module">
+    import {Inject,Component,View,bootstrap} from "angular2/angular2";
+    import {formDirectives,Control} from  "angular2/forms";
+
+    //定义一个简单的算法服务
+    class EzAlgo{
+        add(a,b) { return a+b; }
+        sub(a,b) { return a-b; }
+    }
+
+    @Component({selector : "ez-app"})
+    @View({
+        directives:[EzUseNew,EzUseInjector],
+        styles:[`ez-app>*{padding:1em;}`],
+        template : `
+                <ez-use-new></ez-use-new>
+                <ez-use-injector></ez-use-injector>
+            		`
+    })
+    class EzApp{}
+
+    //组件定义
+    @Component({
+        selector : "ez-use-new"
+    })
+    @View({
+        directives:[formDirectives],
+        template : `
+            		<form>
+                    	<input type="text" ng-control="a" [(ng-model)]="a">
+                        +
+                        <input type="text" ng-control="b" [(ng-model)]="b">
+                        =
+                        {{add()}}
+                    </form>`
+    })
+    class EzUseNew{
+        constructor(){
+            this.a = 37;
+            this.b = 128;
+            //实例化服务对象
+            this.algo = new EzAlgo();
+        }
+        add(){
+            var a = +this.a,
+                    b = +this.b;
+            return this.algo.add(a,b);
+        }
+    }
+
+
+    //组件定义
+    @Component({
+        selector : "ez-use-injector",
+        appInjector : [EzAlgo]
+    })
+    @View({
+        directives:[formDirectives],
+        template : `
+            		<form>
+                    	<input type="text" ng-control="a" [(ng-model)]="a">
+                        +
+                        <input type="text" ng-control="b" [(ng-model)]="b">
+                        =
+                        {{add()}}
+                    </form>`,
+        styles:[`
+             	*{font-size:30px;font-weight:bold;}
+                input{width:100px;}
+             `]
+    })
+    class EzUseInjector{
+        //注入参数声明
+        constructor(@Inject(EzAlgo) algo){
+            this.a = 37;
+            this.b = 128;
+            this.algo = algo;
+        }
+        add(){
+            var a = +this.a,
+                    b = +this.b;
+            return this.algo.add(a,b);
+        }
+    }
+
+    bootstrap(EzApp);
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>body > * {
+        display: none;
+    }</style>
+    <script>
+        document.head.getElementsByTagName('title')[0].innerHTML = 'Static' + location.search;
+        window.addEventListener('load', function () {
+            var styles = document.body.getElementsByTagName('style');
+            var div = document.getElementById(location.search.replace('?', ''));
+            if (!div) {
+                div = document.getElementById('en');
+            }
+            div.style.display = 'block';
+            for (var i = 0; i < styles.length; i++) {
+                document.body.removeChild(styles[i]);
+            }
+        });
+    </script>
+</head>
+<body>
+<style type="text/css">
+    body {
+        margin: 0;
+    }
+
+    body > * {
+        min-height: 180px;
+        padding: 2em;
+        outline: 1px solid #666666;
+        outline-offset: -2em;
+    }
+
+    body > #en:before {
+        position: absolute;
+        color: #d3d3d3;
+        content: 'EN';
+    }
+
+    body > #zh-cn:before {
+        position: absolute;
+        color: #d3d3d3;
+        content: 'ZH-CN';
+    }
+
+    body > #zh-tw:before {
+        position: absolute;
+        color: #d3d3d3;
+        content: 'ZH-TW';
+    }
+</style>
+<div id="en">
+    <p>1.FNA Form&#39;s sign date must be earlier than or equal to Illustration Document&#39;s print date and sign date<br/>
+        2.Illustration Document&#39;s print date and sign date must be earlier than or equal to Application Form&#39;s sign date</p>
+</div>
+
+<div id="zh-cn">
+    <p>1.财务需要分析表的签署日期必须早于或等同保险利益说明的打印日期及签署日期<br/>
+        2.保险利益说明的打印日及签署日期必须早于或等同要保书的签署日期</p>
+</div>
+
+<div id="zh-tw">
+    <p>1.財務需要分析表的簽署日期必須早於或等同保險利益說明的列印日期及簽署日期<br/>
+        2.保險利益說明的列印日期及簽署日期必須早於或等同要保書的簽署日期</p>
+</div>
+</body>
+</html>

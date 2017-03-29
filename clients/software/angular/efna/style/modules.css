@@ -1,0 +1,69 @@
+
+.reporting{
+	background: #ffffdd;
+	padding: 1em;
+	border-radius: 0.5em;
+	margin-left: 40%;
+	width: 80%;
+}
+.reporting .item-report{
+	padding: 1em;
+}
+.reporting .item-report+.item-report{
+	border-top: 1px solid #9999ff;
+}
+.reporting .row-report>*{
+	display: inline-block;
+}
+
+@media (min-width: 992px){
+	.reporting{
+		width: auto;
+	}
+	.reporting .item-report>.row-report{
+		height: calc(2em + 34px);
+	}
+}
+.reporting .item-report>.row-report .fa{
+	margin: 0.3em 0;
+}
+
+
+
+.guideline .item-guideline{
+	width: 46em;
+	margin: 1em auto;
+}
+.guideline .item-guideline+.btn-actions{
+	text-align: center;
+	margin-top: 6em;
+}
+.guideline .item-guideline>*{
+	height: 2em;
+}
+.guideline .item-guideline .dataTitle{
+	float: left;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+.guideline .item-guideline .dataContent{
+	float: right;
+	margin: 1em;
+}
+.guideline .item-guideline .form-control{
+	background: #dddddd;
+	height: 3em;
+	margin: 1em 0;
+	text-align: center;
+}
+.guideline .item-guideline .form-control span:first-child{
+	font-size: 1.3em;
+}
+
+
+
+
+
+
+
+

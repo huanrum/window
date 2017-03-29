@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS2</title>
+
+    <script src="../../../../lib/angular2/system@0.16.11.js"></script>
+    <script src="../../../../lib/angular2/angular2.dev.js"></script>
+    <script src="system.config.js"></script>
+</head>
+<body>
+<!--组件渲染锚点-->
+<ez-app></ez-app>
+<!--定义一个ES6脚本元素-->
+<script type="module">
+    import {Component,View,bootstrap,NgIf} from "angular2/angular2";
+    //引入form指令集
+    import {Control,ControlGroup,formDirectives} from "angular2/forms";
+
+    //EzApp组件
+    @Component({selector:"ez-app"})
+    @View({
+        directives:[EzSearch,EzForm,EzGroup,EzComp],
+        styles:[`ez-app>*{padding:1em;}`],
+        template:`
+                <ez-search></ez-search>
+                <ez-form></ez-form>
+                <ez-group></ez-group>
+                <ez-comp></ez-comp>
+            	`
+        })
+        class EzApp{}
+
+
+         //EzApp组件
+    @Component({selector:"ez-search"})
+    @View({
+        directives:[formDirectives,NgIf],
+        styles:[`form{background:#90a4ae;padding:5px;}`],
+        template:`
+            <form #f="form" (submit)="search(f.value)">
+            <select>
+            <option value="web">网页</option>
+            <option value="news">新闻</option>
+            <option value="image">图片</option>
+            </select>
+            <input type="text" ng-control="start">
+            <input type="text" ng-control="end">
+            <button type="submit">搜索</button>
+            </form>
+            <h1 *ng-if="kw!=''">正在搜索 {{kw}} ...</h1>
+            `
+        })
+        class EzSearch{
+        	constructor(){
+            	this.kw = "";
+            }
+        	search(val){
+            	this.kw = val.start + '-' +val.end;
+                //假装在搜索，2秒钟返回
+                setTimeout(()=>this.kw="",2000);
+            }
+        }
+
+        @Component({selector:"ez-form"})
+        @View({
+        	directives:[NgIf,formDirectives],
+        	template:`
+            <form>
+            <ul>
+            <li>姓名：<input type="text" ng-control="name" [(ng-model)]="data.name"></li>
+            <li>姓别：
+            <select ng-control="gender" [(ng-model)]="data.gender">
+            <option value="Male">男</optoin>
+            <option value="Female">女</optoin>
+            </select>
+            </li>
+            <li>地址：<input type="text" ng-control="address" [(ng-model)]="data.address"></li>
+            <li>电话：<input type="text" ng-control="telephone" [(ng-model)]="data.telephone"></li>
+            <li>已婚：<input type="checkbox" ng-control="marriage" [(ng-model)]="data.marriage"></li>
+            </ul>
+            </form>
+            <pre>{{decode(data)}}</pre>
+            `,
+            styles:[`
+            form{background:#e1f5fe;}
+            ul{list-style:none;padding:10px;margin:0px;}
+            li{line-height:30px;}
+            `]
+        })
+        class EzForm{
+        	constructor(){
+            	this.data = {
+                	name : "whoami"
+                };
+            }
+            decode(val){
+            	return JSON.stringify(val,null,"\t");
+            }
+        }
+
+        @Component({selector:"ez-group"})
+        @View({
+        	directives:[NgIf,formDirectives],
+        	template:`
+                    <form #f="form">
+                    <div>基本信息</div>
+
+                    <ul ng-control-group="basic">
+                    <li>姓名：<input type="text" ng-control="name"></li>
+                    <li>地址：<input type="text" ng-control="address"></li>
+                    <li>电话：<input type="text" ng-control="telephone"></li>
+                    </ul>
+                    <div>专业技能</div>
+
+                    <ul ng-control-group="expertise">
+                    <li>英语：<input type="checkbox" ng-control="english"></li>
+                    <li>科技：<input type="checkbox" ng-control="tech"></li>
+                    <li>运动：<input type="checkbox" ng-control="sport"></li>
+                    </ul>
+                    </form>
+
+                    <pre>{{decode(f.value)}}</pre>
+            `,
+            styles:[`
+            div{padding:5px;background:#b3e5fc;color:red;}
+            form{background:#e1f5fe;}
+            ul{list-style:none;padding:5px;margin:0px;}
+            li{line-height:30px;}
+            `]
+        })
+        class EzGroup{
+            decode(val){
+            	return JSON.stringify(val,null,"\t");
+            }
+        }
+
+        @Component({selector:"ez-comp"})
+        @View({
+        	directives:[formDirectives],
+        	template:`
+            <div [ng-form-model]="controls">
+            <ul>
+            <li>姓名：<input type="text" ng-control="name"></li>
+            <li>地址：<input type="text" ng-control="address"></li>
+            <li>电话：<input type="text" ng-control="telephone"></li>
+            </ul>
+            </div>
+            <pre>{{dump()}}</pre>
+            `,
+            styles:[`
+            div{background:#e1f5fe;}
+            ul{list-style:none;padding:10px;margin:0px;}
+            li{line-height:30px;}
+            `]
+        })
+        class EzComp{
+        	constructor(){
+            	this.controls = new ControlGroup({
+                	name : new Control("Jason"),
+                    address : new Control("London U.K."),
+                    telephone : new Control("114")
+                });
+            }
+            dump(){
+            	return JSON.stringify(this.controls.value,null,"\t");
+            }
+        }
+
+
+        bootstrap(EzApp);
+</script>
+</body>
+</html>

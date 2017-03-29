@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AngularJS2</title>
+
+    <script src="../../../../lib/angular2/system@0.16.11.js"></script>
+    <script src="../../../../lib/angular2/angular2.dev.js"></script>
+    <script src="system.config.js"></script>
+</head>
+<body>
+<!--组件渲染锚点-->
+<my-app></my-app>
+<!--定义一个ES6脚本元素-->
+<script type="module">
+    //从模块库引入三个类型定义
+    import {Component,View,bootstrap,NgFor,EventEmitter} from "angular2/angular2";
+
+    //组件定义
+    @Component({selector:"my-app"})
+    @View({
+        directives:[EzAppChildren,EzStar],
+        template:`
+                <h1>Hello,Angular2</h1>
+                <my-app-children></my-app-children>
+                <ez-star [name]="'雷锋'" [country]="'中国'" (change)="onChange(a)"></ez-star>
+        `
+    })
+    class EzApp{
+        onChange(a){
+            alert(a);
+        }
+    }
+
+    @Component({selector:"my-app-children"})
+    @View({
+        template: `
+            <h1 [style.color]="color">this is children</h1>
+            <span #font_size>Font Size</span>
+            <div><button (click)="roulette();font_size.style.background=color;">{{action}}</button></div>
+        `
+    })
+    class EzAppChildren{
+        constructor(){
+            this.action = `seto`;
+            this.color = 'blue';
+        }
+        roulette(){
+            var color = Math.floor(Math.random() * 256 * 256 * 256).toString(16).slice(-6);
+            while(color.length < 6){
+                color = 0 + color;
+            }
+            this.color = '#' + color;
+        }
+    }
+
+    @Component({
+        selector : "ez-star",
+        properties:["name","country"],
+        events:["change"]
+    })
+    @View({
+        directives:[NgFor],
+        styles:[`
+            ul li{font-size:2em;} ul li:hover{background:#dddddd;cursor: pointer;}
+        `],
+        template : `
+            	<div>
+                    <h2>{{actor}} - Films({{name}}-{{country}})</h2>
+                    <ul>
+                        <li *ng-for="#film of films;#i=index" (click)="selected(film)">{{i+1}} {{film}}</li>
+                    </ul>
+                </div>
+            `
+    })
+    class EzStar{
+        constructor(){
+            this.actor = "Jason Statham";
+            this.change = new EventEmitter();
+            this.films = [
+                "Mechanic: Rescurrection / 2016",
+                "Spy / 2015",
+                "Furious 7 /2015",
+                "Wild Card / 2015",
+                "The Expendables / 2014",
+                "Home Front / 2013",
+                "Hummingbird / 2013",
+                "Fast & Furious 6 / 2013",
+                "Parker / 2013"
+            ];
+        }
+        selected(film){
+            this.change.next(film);
+        }
+    }
+
+    //渲染组件
+    bootstrap(EzApp);
+</script>
+</body>
+</html>

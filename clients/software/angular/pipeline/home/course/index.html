@@ -1,0 +1,8 @@
+<div>
+    <div ng-repeat="media in medias" style="width: 30%;display: inline-block;margin: 0.5%" >
+        <span>{{media.path}}</span>
+        <video controls="" autoplay="" width="100%" >
+            <source ng-src="{{getSrc(media.path)}}" type="{{media.type}}">
+        </video>
+    </div>
+</div>

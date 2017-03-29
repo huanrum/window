@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #content{
+            height: 600px;
+            overflow: auto;
+        }
+        #content>*{
+            background: #dddddd;
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div><input id="userId" title=""><button id="login" disabled="true">Login</button></div>
+    <textarea id="inputContent" title="" disabled="true"></textarea>
+    <div id="content"></div>
+    <script>
+        var userName = 'Name'+(''+Date.now()).slice(6,16);
+        var websocket = new WebSocket('ws://127.0.0.1:9000/');
+
+        document.head.getElementsByTagName('title')[0].innerHTML += ' - '+userName;
+        websocket.onopen = function(evt) {
+            document.getElementById('login').disabled = false;
+            document.getElementById('login').onclick = onclick;
+        };
+        websocket.onclose = function(evt) {
+            //websocket.send('close');
+        };
+        websocket.onmessage = function(evt) {
+            var row = document.createElement('div');
+            document.getElementById('content').appendChild(row);
+            row.innerHTML = evt.data;
+        };
+        websocket.onerror = function(evt) {
+
+        };
+
+        function sendMessage(message,status){
+            var userId = document.getElementById('userId').value;
+            websocket.send(JSON.stringify({From:userId,Status:status}));
+        }
+
+        function onclick(){
+            sendMessage('',1);
+            document.getElementById('inputContent').disabled = false;
+            document.getElementById('inputContent').onkeydown = onkeydown;
+        }
+
+        function onkeydown(e){
+            if ((e.altKey || e.shiftKey || e.ctrlKey) && e.keyCode === 13){
+                sendMessage(e.target.value);
+                e.target.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

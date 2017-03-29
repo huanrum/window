@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Shop</title>
+
+	<link href="../../../../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="../../../../lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="app.css" rel="stylesheet">
+
+	<script src="../../../../lib/other/lodash.js"></script>
+	<script src="../../../../lib/jquery/jquery-2.1.0.js"></script>
+	<script src="../../../../lib/angular/angular.js"></script>
+	<script src="../../../../lib/angular/angular-touch.js"></script>
+	<script src="../../../../lib/other/ehr.js"></script>
+	<script src="shop.js"></script>
+</head>
+<body>
+	<div ng-controller="mainController">
+		<div class="header">
+			<div>
+				<h2 ng-bind="title"></h2>
+				<em ng-bind="info"></em>
+				<h4 ng-bind="selected.title"></h4>
+			</div>
+			<ul class="nav nav-tabs">
+				<li ng-repeat="item in items" ng-hide="item === selected">
+					<a ng-bind="item.title" ng-href="#{{item.id}}" ng-click="item.fn($event)"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="content"></div>
+	</div>
+</body>
+</html>

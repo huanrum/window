@@ -1,0 +1,22 @@
+.content-func-shadow-text{
+    margin: 12px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.content-func-shadow-box{
+    margin: 12px;
+    box-shadow: -2px -5px 5px #000000;
+    border: 2px solid;
+}
+
+.content-func-shadow-box-inset{
+    margin: 12px;
+    box-shadow:inset -2px -5px 5px #990000;
+    border: 2px solid;
+}
+
+.content-func-linear{
+    height: 30px;
+    border: 1px solid;
+    background: linear-gradient(#ffffff,#99ff99,#000000)
+}

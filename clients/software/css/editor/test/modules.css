@@ -1,0 +1,45 @@
+/*-form-dialog style---------------*/
+.form-dialog {
+  border-radius: 1em; }
+  .form-dialog > *:first-child {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em; }
+  .form-dialog > *:last-child {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em; }
+  .form-dialog .dialog-header {
+    background: #66afe9;
+    height: 2em;
+    text-align: center; }
+    .form-dialog .dialog-header label {
+      font-size: 1.3em;
+      margin-top: 0.3em; }
+    .form-dialog .dialog-header .close {
+      float: right;
+      margin: 0.3em; }
+  .form-dialog .dialog-section {
+    background: #dddddd;
+    padding: 1em 1em; }
+    .form-dialog .dialog-section .some-field.col-md-6 {
+      padding: 0;
+      float: left;
+      width: 50%; }
+    .form-dialog .dialog-section .row {
+      margin: 1em; }
+    .form-dialog .dialog-section .right {
+      float: right; }
+  .form-dialog .dialog-footer {
+    background: #66afe9;
+    height: 3em;
+    text-align: center; }
+    .form-dialog .dialog-footer > * {
+      cursor: pointer;
+      margin: 0.3em 2em; }
+
+/*test-01*/
+#pattern {
+  background: linear-gradient(360deg, rgb(8.92601%,95.74957%,5.65459%) 0%, rgb(4.17216%,7.67306%,2.76916%) 6.25%, rgb(12.6411%,37.3373%,23.31433%) 12.5%, rgb(80.95483%,20.58899%,23.69062%) 18.75%, rgb(56.9795%,31.77451%,77.07304%) 25%, rgb(16.62603%,90.71854%,55.21247%) 31.25%, rgb(66.43651%,48.43147%,45.3441%) 37.5%, rgb(67.96623%,39.57619%,82.42187%) 43.75%, rgb(21.8337%,66.76395%,86.04122%) 50%, rgb(37.23598%,41.16383%,78.79426%) 56.25%, rgb(98.62122%,19.57163%,96.16778%) 62.5%, rgb(37.7008%,66.15295%,71.61026%) 68.75%, rgb(25.47797%,54.8934%,27.15611%) 75%, rgb(37.49207%,58.60572%,90.1123%) 81.25%, rgb(86.78298%,18.42825%,20.84751%) 87.5%, rgb(65.72654%,26.93855%,89.29052%) 93.75%, rgb(12.89876%,95.25145%,88.30285%) 100%);
+  height: 300px;
+  width: 400px; }
+
+/*# sourceMappingURL=modules.css.map */

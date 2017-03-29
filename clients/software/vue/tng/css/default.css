@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #c0ae92;
+    -webkit-border-radius: 4px;
+    outline: #fff solid 2px;
+    outline-offset: -2px;
+    border: 2px solid #fff;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+    -webkit-border-radius: 0;
+}
+
+ul.list-style-none{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.main-left{
+    position: fixed;
+    float: left;
+    width: 15em;
+    height: 100%;
+    background: #a4a4ff;
+}
+.main-right{
+    position: fixed;
+    float: left;
+    width: calc(99% - 13em);
+    height: 100%;
+    left: 15em;
+}
+.sub-menu .form-control{
+    background:#f3f3f3;
+}
+.main-content table{
+    width:100%
+}
+.main-content table tr{
+   line-height: 2.5em;
+    border-bottom: 1px solid #666666;
+}
+.main-content table tr:hover{
+    background: #f3f3f3;
+}
+.main-content table tr>*{
+    padding: 0.2em 2em;
+    text-align: center;
+}
+.main-content table tr .btn-group>*{
+    margin: auto 1em;
+}
+
+.main-content .item-list{
+    overflow: auto;
+    height: 100%;
+}
+
+.main-content .item-list .item-detail{
+    display: inline-block;
+    border: 1px solid #f3f3f3;
+    margin: 1em;
+}
+.main-content .item-list .item-detail:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    border: 1px solid #0000cc;
+}
+

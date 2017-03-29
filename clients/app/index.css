@@ -1,0 +1,531 @@
+body,p,button,input{
+    margin: 0;
+}
+
+@keyframes warning {
+    0% {
+        box-shadow: 0 0 0.25em #ffff00;
+    }
+    50% {
+        box-shadow: 0 0 2em #ffff00;
+    }
+    100% {
+        box-shadow: 0 0 0.25em #ffff00;
+    }
+}
+.opacity-03{
+    opacity: 0.3;
+}
+.opacity-05{
+    opacity: 0.5;
+}
+
+.app-loading{
+    line-height: 3.75em;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #999999;
+    opacity: 0.4;
+    text-align: center;
+    font-size:4em;
+    font-weight: bold;
+    padding-top: 20%;
+}
+.app-re-login{
+    margin: 1%;
+    position: fixed;
+    border: 0.1em solid #dddddd;
+}
+.app-re-login:hover{
+    background: #dddddd;
+    cursor: pointer;
+}
+
+
+/* base layout */
+.app-windows{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #0e90d2;
+    background-image: url(../desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom, center bottom;
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
+.app-desktop{
+    position: relative;
+    height: 96%;
+}
+.app-taskbar{
+    height: 4%;
+    background: #555577;
+    opacity: 0.9;
+}
+.app-desktop-soft-list{
+    height: 100%;
+}
+.app-desktop-mark{
+    cursor: pointer;
+    position: absolute;
+    top:2em;
+    right:2em;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background: #99ffff;
+    text-align: center;
+    padding: 1.5em;
+}
+.app-desktop-soft-row{
+    float: left;
+}
+.app-desktop-suspension{
+    position:absolute;
+    z-index: 99;
+}
+.app-desktop-suspension>* {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background: #666666;
+}
+.app-desktop-suspension>*:hover{
+    cursor: pointer;
+}
+.app-desktop-suspension .main{
+    background: #99ff99;
+}
+.app-desktop-suspension .main:hover{
+    animation: warning 1.5s infinite ease-in;
+}
+.app-select-content{
+    position: fixed;
+    border: 0.1em dashed #999999;
+    background: #9999ff;
+    opacity: 0.5;
+}
+.app-desktop-group.app-desktop-soft-list{
+    position: fixed;
+    border-radius: 8%;
+    border: 0.1em solid #999999;
+    overflow-y: auto;
+    background: #ddddff;
+}
+.app-desktop-group>.icon{
+    border: 0.1em solid #999999;
+}
+.app-desktop-group>.icon>div{
+    height: 40%;
+    padding: 1% 10%;
+}
+.app-desktop-group>.icon>div>div{
+    display: inline-block;
+    margin: 5%;
+}
+
+/* desktop menu */
+.app-desktop-menu-item{
+    width: 5em;
+    height: 4.4em;
+    margin: 0.3em;
+    padding: 0.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.selection{
+    background: #dddddd;
+    border-radius: 5%;
+}
+.app-desktop-menu-item:hover{
+    background: #ffffff;
+    border-radius: 35%;
+    opacity: 0.6;
+    cursor: pointer;
+    animation: warning 1.5s infinite ease-in;
+}
+.app-desktop-menu-item>.icon{
+    height: 80%;
+    border-radius: 35%;
+    overflow: hidden;
+    zoom:0.7;
+}
+.app-desktop-menu-item>.title{
+    font-size: 0.8em;
+    color: #ffffff;
+    text-align: center;
+}
+.app-desktop-menu-item>.close,.app-desktop-menu-item>.save{
+    position: absolute;
+    top:0;
+    left:50%;
+    width: 100%;
+    background: rgba(125,125,125,0.8);
+    color: #ff0000;
+    font-size: 2em;
+    font-weight: bold;
+    display: none;
+}
+.app-desktop-menu-item>.save{
+    color: #00ff00;
+}
+
+/* start menu */
+.app-start-button{
+    float: left;
+    width: 2.5em;
+    height: 100%;
+    display: inline-block;
+
+    margin-left: 0.375em;
+    border-radius: 50%;
+    background-image: url(../start.png);
+    background-size: 100% 100%;
+    box-shadow: #ddddff 0.1em -0.1em;
+    zoom:1.5;
+}
+
+.app-start-button:hover{
+    opacity: 0.6;
+}
+.app-taskbar-buttons{
+    float: left;
+    height: 100%;
+    display: inline-block;
+    margin-left: 0.32em;
+}
+.app-min-menu-item{
+    display: inline-block;
+    background: #ddddff;
+    border: 0.1em solid #999999;
+    margin: 0.13em 0.31em;
+    min-width: 2.5em;
+    opacity: 0.7;
+}
+.app-min-menu-item:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.app-fixed-buttons{
+    float: right;
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+}
+.app-start-menu{
+    position: fixed;
+    width: 30%;
+    height: 60%;
+    min-width: 12.5em;
+    background: #777799;
+    bottom: 4%;
+    border-radius: 2%;
+    border: 0.1em solid #333333;
+}
+.app-start-software{
+    display: inline-block;
+    float: left;
+    width: 60%;
+    height: 96%;
+    margin: 2%;
+    border-radius: 2%;
+    background: #ffffff;
+}
+.app-start-fixed{
+    display: inline-block;
+    float: left;
+    width: 32%;
+    height: 96%;
+    margin: 2%;
+    border-radius: 2%;
+}
+.app-start-software-list{
+    height: 87%;
+    overflow-y: hidden;
+}
+.app-start-software-list-all{
+    overflow-y: auto;
+}
+.app-start-software-change{
+    height: 4%;
+    background: #ffffff;
+    padding-left: 20%;
+    border:0;
+    border-top: 0.1em solid #dddddd;
+}
+.app-start-software-search{
+    overflow-y: hidden;
+    background: #eeeeee;
+    padding: 1%;
+}
+.app-start-software-search>input{
+    width: 90%;
+    margin: 2%;
+}
+
+.app-start-software-menu-item{
+    width: 98%;
+    height: 1.2em;
+    margin: 0.25em  0.1em;
+    line-height: 0.75em;
+}
+.app-start-software-menu-item:hover{
+    cursor: pointer;
+    opacity: 0.6;
+    background: #ddddff;
+}
+.app-start-software-menu-item>.icon{
+    display: inline-block;
+}
+.app-start-software-menu-item>.title{
+    font-size: 0.6em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.app-start-fixed>.start-fixed-button{
+    height: 92%;
+}
+.app-start-fixed>.start-fixed-button>.user{
+    color:#ffffff;
+    font-size: 1em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.app-start-fixed>.shut-down-button{
+    height: 5%;
+    padding: 10%;
+}
+.app-start-fixed>.shut-down-button>*{
+    border: 0.1em solid #ffffff;
+    border-radius: 0.3em;
+    shape-margin:  0.1em;
+    padding-left: 0.3em;
+}
+.app-start-fixed>.shut-down-button>*:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.app-right-menu-item{
+    position: fixed;
+    border: 0.1em solid #ddddff;
+    list-style-type: none;
+    background: #999999;
+    padding: 0;
+}
+.app-right-menu-item>li{
+    margin: 0.1em;
+    padding:  0.03em;
+}
+.app-right-menu-item>li:hover{
+    background: #9999ff;
+    cursor: pointer;
+}
+.app-right-menu-item-select{
+    background: #dddddd;
+}
+
+.self-dialog-content{
+    width: 98.0%;
+    height: 97.0%;
+    margin: 0.5% auto;
+}
+.self-dialog-content-simplified{
+    width: 99.65%;
+    height: 99.7%;
+    margin: 0;
+}
+
+.app-login{
+    overflow: hidden;
+}
+.app-login>.app-login-content{
+    margin: 4%;
+}
+.app-login>.app-login-button{
+    margin: 4%;
+}
+.app-login>.app-login-content>div{
+    margin: 0.94em;
+    height: 1.56em;
+}
+.app-login>.app-login-content>div>div{
+    display: inline-block;
+    float: left;
+    width: 30%;
+}
+.app-login>.app-login-content>div>input{
+    display: inline-block;
+    float: left;
+    width: 60%;
+}
+.app-login>.app-login-button>*{
+    display: inline-block;
+    float: right;
+    margin: 0.31em 1.88em;
+}
+
+
+.app-plug-bookshelf>*{
+    display: inline-block;
+    float: left;
+    margin: 1% 1%;
+    color: #0000ff;
+    box-shadow: inset 0 0.13em 0.81em #999;
+}
+.app-plug-book:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.app-plug-book>.icon{
+    width: 6.125em;
+    height: 7.5em;
+}
+.app-plug-book>.icon>*{
+    margin: 30% 25% ;
+}
+.app-plug-book>.title{
+    font-size: 1.0em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    width: 6.125em;
+    height: 1.25em;
+    border-top: 0.1em solid #dddddd;
+}
+
+.app-plug-explorer>.header>input{
+    width: 90%;
+    height: 1.56em;
+    background: #dddddd;
+}
+.app-plug-explorer>.header>button{
+    width: 8%;
+    margin-left: 1%;
+    cursor: pointer;
+}
+.app-plug-explorer>.content{
+    height: 90%;
+    overflow: auto;
+    padding: 0;
+    font-size: 1em;
+}
+.app-plug-explorer-item{
+    display: inline-block;
+    float: left;
+}
+.app-plug-explorer-item:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.app-plug-explorer-item>.icon{
+    width: 5.625em;
+    height: 5em;
+}
+.app-plug-explorer-item>.icon>*{
+    margin: 25% 10% ;
+}
+.app-plug-explorer-item>.title{
+    font-size: 0.7em;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    width: 6.125em;
+    height: 1.75em;
+}
+
+
+.app-transform-first{
+    display: inline-block;
+    float: left;
+    border-left: 0.1em solid #dddddd;
+    margin-right: 2.25em;
+}
+
+/*
+    system.software
+*/
+.system-color>*{
+    margin: 2%;
+    width: 25em;
+    height: 3.75em;
+    border: 0.1em solid #333333;
+}
+
+.system-photo img:hover{
+    background: #dddddd;
+}
+
+
+/* CSS for the font-name + font-size plugin */
+.wysiwyg-toolbar-list {
+    max-height: 16em;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.wysiwyg-toolbar-list a,
+.wysiwyg-toolbar-list a:link,
+.wysiwyg-toolbar-list a:visited {
+    display: block;
+    color: black;
+    padding:0.3125em 0.625em;
+    text-decoration: none;
+    cursor: pointer;
+}
+.wysiwyg-toolbar-list a:hover {
+    color: HighlightText;
+    background-color: Highlight;
+}
+/* CSS for the smiley plugin */
+.wysiwyg-toolbar-smilies {
+    padding: 0.625em;
+    text-align: center;
+    white-space: normal;
+}
+.wysiwyg-toolbar-smilies img {
+    display: -moz-inline-stack; /* inline-block: http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/ */
+    display: inline-block;
+    *display: inline;
+}
+.wysiwyg-toolbar-smilies img:hover{
+    background-color: Highlight;
+}
+
+.app-systemsoftware-relation{
+    padding: 5%;
+}
+.app-systemsoftware-relation>*{
+    margin: 4% auto;
+    font-size: 1.5em;
+}
+.app-systemsoftware-relation .frient:hover{
+    background: #3a87ad;
+    opacity: 0.6;
+}
+.app-systemsoftware-relation .relation-logout{
+    color:#dddddd;
+}
+.user-content .app-desktop-menu-item{
+    position: relative;
+    float: left;
+}
+
+.ehr-db-menu{
+    margin: 2px;background: #dddddd;cursor: pointer;
+}
+.ehr-db-menu:hover{
+    opacity: 0.8;
+}
+.ehr-db-menu.active{
+    background: #ddddff;
+}

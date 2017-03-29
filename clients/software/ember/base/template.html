@@ -1,0 +1,29 @@
+<div id="ember.demo">
+	<div class="ember-demo">
+		<script type="text/x-handlebars" id="notes">
+			<div id="nodes" class="azureBlueBackground azureBlueBorderThin">
+				{{input valueBinding="newNoteName"}}
+				<button class="btn btn-default btn-xs" {{action "createNewNode"}}>
+					New Node
+				</button>
+				<div class="list-group" style="margin-top:10px;">
+					{{#each controller}}
+						{{#linkTo "notes.note" this class="list-group-item"}}
+							{{name}}
+						{{/linkTo}}
+					{{/each}}
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars" id="notes/note">
+			<div id="selectedNode">
+				{{#if model}}
+				<h1>name: {{controller.model.name}}</h1>
+				{{view Ember.TextArea valueBinding="value"}}
+				<button class="btn btn-primary form-control mediumTopPadding" {{action "updateNode"}}>
+					Update
+				</button>
+			</div>
+		</script>
+	</div>
+</div>

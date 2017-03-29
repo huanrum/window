@@ -1,0 +1,89 @@
+
+/* main */
+/* .dialog-user-option{text-align: center;} */
+.dialog-user-option i{
+    display: block;
+    text-align: center;
+    color: #2275B6;
+}
+.dialog-user-option .sino-title,.dialog-user-option .sino-value{
+    width: 60%;
+    float: left;
+    line-height: 2.5em;
+}
+.dialog-user-option .sino-title{
+    width: 40%;
+    padding-left: 10%;
+    font-weight: bold;
+}
+.dialog-user-option .sino-value select{
+    width: auto;
+}
+.dialog-user-option .sino-value input[readonly]{
+    background: none !important;
+    box-shadow: none;
+    border:0;
+}
+.dialog-user-option .row:last-child .sino-value >*{
+    height:auto;
+    background: none !important;
+    padding:6px 0;
+}
+.dialog-user-option .row:last-child .sino-value >* .form-control{
+    border:0;
+    box-shadow:none;
+}
+
+.mam-dialog.dialog-section .border-none .sino-value select[readonly],
+.mam-dialog.dialog-section .border-none .sino-value input[readonly],
+.mam-dialog.dialog-section .border-none .sino-value .sino-directive[readonly]{
+    background: none ;
+    box-shadow: none;
+    border: none;
+}
+
+.user-dialog.dialog-section .sino-value [sino-multiple]>*{
+    width: 50%;
+}
+
+
+.role-dialog.dialog-section .sino-value input[readonly]{
+    background: none ;
+    box-shadow: none;
+}
+.role-dialog.dialog-section .sino-value input[readonly]{
+    border: none;
+}
+.role-dialog.dialog-section .grid-header .sino-value input{
+    font-weight: bold;
+}
+.role-dialog.dialog-section .group-function .group-row:not(:first-child){
+    border-top: 1px solid #d3d3d3;
+}
+
+.role-dialog.dialog-section .role-multiple .sino-value .fa{
+    display: block;
+}
+.role-dialog .sino-signChar.fa,.function-dialog .sino-signChar.fa,.user-dialog .sino-signChar.fa{
+    margin: auto 0;
+    font-size:1.1em;
+}
+.role-dialog  .sino-value table input{
+    padding:6px 0;
+}
+
+.function-dialog .sino-value .fa{
+    width:100%;
+}
+
+.top-up-information-dialog .top-up-account [sino-table]{
+    margin: 2em 0 0 0;
+}
+.top-up-information-dialog .select-template .title{
+    position: absolute;
+    top:1em;
+    left: -88%;
+}
+
+
+

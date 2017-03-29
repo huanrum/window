@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.active{
+    background:#d3d3d3;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.show-list .show-item{
+    display: inline-block;
+    border: 1px solid #d3d3d3;
+    margin: 1em;
+}
+.show-list .show-item .title{
+    text-align: center;
+    font-weight: bold;
+}
+.show-list .show-item .img{
+    width: 100px;
+    height: 140px;
+}
+
+.dialog-parent{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(225,225,225,0.5);
+}
+
+.show-dialog{
+    position: absolute;
+    margin-left: 50%;
+    top: 50%;
+    background: #ffffff;
+    transform:translate(-50%,-50%);
+}
+
+.show-dialog .header{
+    height: 1.56em;
+    background: #2e83ff;
+    text-align: center;
+}
+.show-dialog .content{
+    min-height: 7.5em;
+    margin: 1em;
+    border-radius: 2%;
+    overflow: auto;
+}
+.show-dialog .content .contnet-item{
+    min-width:400px;
+    margin: 0.5em;
+}
+.show-dialog .content .contnet-item .title{
+    display: inline-block;
+    width:30%;
+    font-weight: bold;
+}
+.show-dialog .content .contnet-item .value{
+    display: inline-block;
+    width:70%;
+}
+.show-dialog .footer{
+    height: 1.5em;
+    background: #2e83ff;
+    color:#dddddd;
+}
+
+.show-grid table th,
+.show-grid table td{
+    text-transform: capitalize;
+    min-width: 12em;
+    padding: 0.2em 1em;
+    border: 1px solid #d3d3d3;
+}
+.show-grid table  thead tr{
+    background: #6656f3;
+}
+.show-grid table tr:nth-child(2n){
+    background: #f3f3f3;
+}
+
+.main-about{
+    padding: 2em;
+}
+.main-content{
+    position: relative;
+    height: 100%;
+}
+
+.main-content .main-left{
+    position:fixed;
+    float: left;
+    width: 12em;
+    height: 100%;
+    background: #6d6d6d;
+}
+
+.main-content .main-right{
+    position:fixed;
+    float: right;
+    width: calc(100% - 12em);
+    height: 100%;
+    right: 0;
+    background: #9f9f9f;
+}
+
+.main-content .main-left .main-menu ul{
+    list-style: none;
+    padding: 0;
+}
+.main-content .main-left .main-menu ul li{
+    cursor: pointer;
+    font-size: 2em;
+    padding: 0.1em 0.5em;
+}
+.main-content .main-left .main-menu ul li:hover{
+    background: #2b542c;
+    color:#ffffff;
+}
+
+.main-content .main-right .main-header{
+    height: 8%;
+}
+.main-content .main-right .main-content{
+    height: 89%;
+    background: #ffffff;
+}
+.main-content .main-right .main-footer{
+    height: 3%;
+}
+
+.main-content .main-right .main-header>*{
+    margin: 1em;
+}
+.main-content .main-right .main-header .left a,
+.main-content .main-right .main-header .right a{
+    margin: 1em 2em;
+}

@@ -1,0 +1,7 @@
+<div>
+    jquery可以通过animate方法来实现动画。其用法：animate(params, [duration], [easing], [callback])
+
+    其中第一个参数是一组要实现动画的最终css样式。第二个参数是执行动画的时间，第三个参数是动画的效果，需要插件的配合。最后一个参数是动画执行完成之后执行的处理函数。而有些时候在实现动画的时候需要自定义一些动画处理，比如说文本的改变，多个DOM元素一起的动画，采用上面的用法就不能实现了，不过jquery还提供了另外的一种用法：animate（params，｛duration：1000，easing："***",step:function(obj){*******},complete:[callback]}）
+
+    在step中就是动画执行每一步（每一帧）的时候将执行的处理函数。这样就可以实现自定义复杂的动画效果了！
+</div>

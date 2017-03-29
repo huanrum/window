@@ -1,0 +1,105 @@
+<div class="header minor" sino-keypress="!V">
+    <div class="left">
+        <div class="actions" ng-if="toolbars.length">
+            <a ng-repeat="toolbar in toolbars" class="action fa {{toolbar.class}} pointer" ng-click="toolbar.fn()" ng-if="!toolbar.filter || toolbar.filter()" title="{{toolbar.info| language}}" sino-use-id="toolbar.info" sino-keypress="L">{{toolbar.title| language}}</a>
+        </div>
+    </div>
+    <div class="right">
+        <div class="search" ng-if="!!searchColumns">
+            <select ng-if="searchColumns.length" ng-model="filter.searchBy" ng-change="filter.search = ''" sino-keypress="L"><option ng-repeat="op in searchColumns" value="{{op.field}}">{{op.title | language}}</option></select>
+            <span class="sino-directive" ng-show="!searchEditor()">
+                <input ng-model="filter.search" placeholder="{{'search'| language}}" ng-keypress="search($event)" sino-use-id sino-keypress="L">
+                <a class="fa fa-search pointer" ng-class="{'helper-icon':filter.search}" ng-click="refreshData(true)" title="{{'search'| language}}" sino-use-id="'search'"></a>
+            </span>
+            <span class="sino-directive" ng-show="!!searchEditor()">
+                <select ng-model="filter.search" ng-change="refreshData(true)" sino-keypress="L"><option ng-repeat="op in searchEditor()" value="{{op}}">{{op}}</option></select>
+            </span>
+        </div>
+        <div class="download" ng-if="download">
+            <i class="action fa fa-download pointer col-md-1" ng-click="download()" title="{{'download'| language}}" sino-use-id="'download'"></i>
+            <div class="col-md-4">
+                <input class="form-control" ng-model="filter.endDate" sino-datepicker placeholder="End Time" ng-change="refreshData(true)" sino-use-id sino-keypress="L">
+            </div>
+            <span class="static-text"> - </span>
+            <div class="col-md-4">
+                <input class="form-control" ng-model="filter.startDate" sino-datepicker placeholder="Start Time" ng-change="refreshData(true)" sino-use-id sino-keypress="L">
+            </div>
+        </div>
+        <div class="download" ng-if="searchDownload">
+            <input class="form-control" ng-model="filter.endDate" sino-datepicker placeholder="Search Date" ng-change="refreshData(true)" sino-use-id sino-keypress="L">
+        </div>
+    </div>
+    <div class="right absolute-3" ng-show="available || reserved">
+        <div class="active-menu">
+            <div>{{'available'|language}} : {{available}}</div>
+            <div>{{'reserved'|language}} : {{reserved}}</div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <table>
+        <thead sino-count-row>
+        <tr sino-keypress="!V">
+            <th ng-show="isDebug">&nbsp;</th>
+            <th  ng-repeat="column in columns" ng-hide="column.hide" class="pointer {{column.class}}" ng-click="!notSort &&!column.notSort && sortColumn(column)" ng-class="{'first-col':$first}" width="{{column.width}}" sino-use-id="column.title">
+                <span>{{column.title | language}}
+                    <span ng-if="column.toolbars">
+                        <a ng-repeat="toolbar in column.toolbars" ng-click="toolbar.fn()" sino-use-id="column.field +'-'+action.title" sino-keypress="L">{{toolbar.title| language}}</a>
+                    </span>
+                    <span class="sort-arrow" ng-show="!notSort && !column.notSort" ng-class="{'fa fa-sort-down': column.isAscending, 'fa fa-sort-up': !column.isAscending,'fa-no-active':filter.sortBy !== column.field }"></span>
+                </span>
+            </th>
+            <th ng-if="actions && actions.length">{{'actions'| language}}</th>
+        </tr>
+        </thead>
+        <tbody ng-if="dataList.length">
+        <tr ng-repeat="item in dataList" ng-class="{'selected-item':isDebug && item === selectedItem}" ng-click="selected(item)" ng-dblclick="operate($event,item)" sino-use-id="'row-'+$index" sino-keypress="V">
+            <td ng-show="isDebug">
+                <a class="fa" ng-class="{'fa-hand-o-right':isDebug && item === selectedItem}"></a>
+            </td>
+            <td ng-repeat="column in columns"  class="{{column.class}}" ng-hide="column.hide" style="width:{{column.width || column.tooltip || 'auto'}} ">
+                <div ng-class="{'inline-table':!!column.actions}" sino-tooltip="column.tooltip" ng-bind-html="getValue(item,column)"></div>
+                <span class="action-btn right">
+                    <a class="whitespace-normal" ng-repeat="action in column.actions" ng-click="!action.disable(item) &&action.fn(item)" title="{{action.title| language}}"
+                       ng-if="!action.filter||action.filter(item)"  ng-class="{'c-gray':action.disable(item)}" sino-use-id="column.field +'-'+action.title+'-'+$parent.$parent.$index" sino-keypress="L">
+                        <i class="fa fa-fw {{action.class}}"></i><i ng-if="!action.class">{{action.title| language}}</i>
+                    </a>
+                </span>
+            </td>
+            <td class="action-btn" ng-if="actions && actions.length">
+                <a class="whitespace-normal" ng-repeat="action in actions" ng-click="!action.disable(item) &&action.fn(item);" title="{{action.title| language}}"
+                   ng-if="!action.filter||action.filter(item)"  ng-class="{'c-gray':action.disable(item)}" sino-use-id="action.title+'-'+$parent.$index" sino-keypress="L">
+                    <i class="fa fa-fw {{action.class}}"></i><i ng-if="!action.class">{{action.title| language}}</i>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <form>
+        <div ng-repeat="row in rows" class="row">
+            <div class="sino-title inline-table font-weight"><span>{{row.title | language}}</span></div>
+            <div class="sino-value inline-table text-success"><span>&nbsp; {{ getValue(form,row)}}</span></div>
+        </div>
+    </form>
+</div>
+<div class="footer">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+        <ul class="pagination-sm pagination pointer" ng-if="totalPages>1"  page-show-length="10" sino-use-id="pagination">
+            <li ng-class="{disabled: filter.pageNo === 1}"><a ng-click="filter.pageNo > 1 && goPage(1)" sino-use-id="'firstPage'">{{'firstPage'| language}}</a></li>
+            <li ng-class="{disabled: filter.pageNo === 1}"><a ng-click="filter.pageNo > 1 && goPage(filter.pageNo -1)" sino-use-id="'previousPage'">{{'previousPage'| language}}</a></li>
+            <li ng-class="{active: filter.pageNo === page }" ng-repeat="page in totalPages|toArray:pageShowLength"><a ng-click="filter.pageNo!=page && goPage(page)" sino-use-id="'page-'+page">{{page}}</a></li>
+            <li ng-class="{disabled: filter.pageNo === 1}"  ng-if="totalPages>pageShowLength*2"><a>...</a></li>
+            <li ng-if="totalPages>pageShowLength*2"><input title="" sino-input="[0-9]" ng-model="filter.pageNo" ng-keyup="$event.keyCode === 13 && goPage(filter.pageNo)" sino-use-id></li>
+            <li ng-class="{disabled: filter.pageNo === 1}"  ng-if="totalPages>pageShowLength*2"><a>...</a></li>
+            <li ng-class="{active: filter.pageNo === page }" ng-repeat="page in totalPages|toArray:-pageShowLength"><a ng-click="filter.pageNo!=page && goPage(page)" sino-use-id="'page-'+page">{{page}}</a></li>
+            <li ng-class="{disabled: filter.pageNo === totalPages}"><a ng-click="filter.pageNo < totalPages && goPage(filter.pageNo +1)" sino-use-id="'nextPage'">{{'nextPage'| language}}</a></li>
+            <li ng-class="{disabled: filter.pageNo === totalPages}"><a ng-click="filter.pageNo < totalPages && goPage(totalPages)" sino-use-id="'lastPage'">{{'lastPage'| language}}</a></li>
+        </ul>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+</div>

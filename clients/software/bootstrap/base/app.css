@@ -1,0 +1,48 @@
+.bootstrap-base>*{
+    margin-top: 1%;
+}
+.bootstrap-base>.tab-content{
+    height: 79%;
+}
+
+.bootstrap-link>*{
+    margin: 2%;
+    color: #0000ff;
+    display: inline-block;
+    float: left;
+    width: 120px;
+}
+
+.bootstrap-link>*:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.bootstrap-link>*>img{
+    height: 100px;
+    width: 120px;
+}
+
+.bootstrap-optimize.inline>*{
+    display: inline-block;
+    margin: 5px;
+}
+
+.bootstrap-module >*{
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid #0000ff;
+}
+
+.bootstrap-plug >*{
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid #0000ff;
+}
+
+.bootstrap-word-test{
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid #0000ff;
+}

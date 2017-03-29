@@ -1,0 +1,84 @@
+.rect{
+	width: 16.25em;
+	height:2em;
+	position: absolute;
+	margin: 12em 30em;
+	background: #0cc;
+	border: 0.063em solid #333;
+}
+.rect>*{
+	background: #00aacc;
+	height:2em;
+}
+.circle {
+	width: 16em;
+	height:16em;
+	position: absolute;
+	margin: 2em 5em;
+	border-radius: 50%;
+	background: #0cc;
+	border: 0.125em solid #ffffff;
+}
+.circle:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+.circle .pie_left, .circle .pie_right {
+	width: 16em;
+	height: 16em;
+	position: absolute;
+	top: 0;left: 0;
+}
+.circle .left, .circle .right {
+	display: block;
+	width:16em;
+	height:16em;
+	background:#00aacc;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.circle .pie_right, .circle .right {
+	clip:rect(0,auto,auto,8em);
+}
+.circle .pie_left, .circle .left {
+	clip:rect(0,8em,auto,0);
+}
+.circle .mask {
+	width: 11em;
+	height: 11em;
+	border: 0.125em solid #ffffff;
+	border-radius: 50%;
+	left: 2.5em;
+	top:2.5em;
+	background: #dddddd;
+	position: absolute;
+	text-align: center;
+}
+.circle .mask:hover{
+	background: #333333;
+	color: #dddddd;
+	animation:rotate 1s;
+}
+.circle .mask>*{
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-top:3em;
+}
+.circle .mask .strong{
+	font-size: 2.5em;
+	font-weight: bold;
+}
+.circle .mask .percent:after{
+	content:'%';
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
