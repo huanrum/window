@@ -1107,13 +1107,14 @@
 				if(!$e('app.user').isDebug){
 					var name = loginContent.find('.app-login-content .name input').val();
 					var password = loginContent.find('.app-login-content .password input').val();
-					$e('$q.http')($e('app.user').service +'/login/login?name='+name+'&password='+$e('base.md5')(password)).then(function (res) {
+					$e('$q.http')($e('app.user').service +'/login/login?name='+name+'&password='+$e('base.md5')(password)).then(function (res,header) {
 						if(res && JSON.parse(res)){
 							var data = JSON.parse(res);
 							$e('app.user').id = data.id;
 							$e('app.user').isAdmin = data.isAdmin;
 							$e('app.user').name = loginContent.find('.app-login-content .name input').val();
 							$e('app.user').clientsoftware = data.softwares;
+							$e('app.user').token = data.token;
 							dialog.parentNode.removeChild(dialog);
 							$(dialog).find('.ehuanrum-controls-dialog-footer').html('');
 							scope.$close();
@@ -1148,8 +1149,10 @@
 				});
 			}else if(position.refresh){
 				$scope.modalUpdate(false);
-				$e('$q.http')($e('app.user').service +'/login/login?name='+$e('app.user').name +'&password='+$e('base.md5')('-')).then(function(res){
-					$e('app.user').clientsoftware = JSON.parse(res);
+				$e('$q.http')($e('app.user').service +'/login/login?name='+$e('app.user').name +'&token='+$e('app.localStorage')().token).then(function(res){
+					var data = JSON.parse(res);
+					$e('app.user').clientsoftware = data.softwares;
+					$e('app.user').token = data.token;
 					promise.resolve();
 				});
 			}else{
@@ -1239,7 +1242,7 @@
 			return [
 				{name:'Create',ac:function(){}},
 				{name:'Refresh',ac:function(){
-					$e('loading').load();
+					$e('app.loading').load();
 					base.filter(app_software.dictionary(),function(item){
 						return item.el.classList.contains('app-desktop-menu-item') && item.el.style.left && item.el.style.top;
 					},function(ie){
@@ -1248,7 +1251,7 @@
 					});
 					setTimeout(function(){
 						$e('app.windows')();
-						$e('loading').unload();
+						$e('app.loading').unload();
 					},1000);
 				}},
 				{name:'Sort',ac:function(){
@@ -1262,7 +1265,7 @@
 					if(user.groupBy){
 						user.groupBy = null;
 					}else{
-						user.groupBy = 'group';
+						user.groupBy = 'groupName';
 					}
 					$e('app.user').refresh = 'group';
 					window.location.reload();
@@ -1858,6 +1861,7 @@
 
 				obj.groupBy = $e('app.user').groupBy;
 				obj.refresh = $e('app.user').refresh;
+				obj.token = $e('app.user').token;
 				obj.lastLogin = true;
 				data[$e('app.user').name] = obj;
 

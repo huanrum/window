@@ -20,6 +20,21 @@
             
             </summary>
         </member>
+        <member name="T:Win7.Services.App_Start.SwaggerNet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.App_Start.SwaggerNet.PreStart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.App_Start.SwaggerNet.PostStart">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:Win7.Services.Controllers.BaseController">
             <summary>
             
@@ -69,12 +84,13 @@
             
             </summary>
         </member>
-        <member name="M:Win7.Services.Controllers.LoginController.Login(System.String,System.String)">
+        <member name="M:Win7.Services.Controllers.LoginController.Login(System.String,System.String,System.String)">
             <summary>
             
             </summary>
             <param name="name"></param>
             <param name="password"></param>
+            <param name="token"></param>
             <returns></returns>
         </member>
         <member name="M:Win7.Services.Controllers.LoginController.GetFrient(System.Int32,System.Int32)">
@@ -125,6 +141,11 @@
             <param name="userSoftwares"></param>
             <returns></returns>
         </member>
+        <member name="T:Win7.Services.Controllers.MessageController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Win7.Services.Controllers.MessageController.Get(System.Int32,System.Int32)">
             <summary>
             
@@ -144,6 +165,13 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:Win7.Services.Controllers.SoftWareController.GetNew(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
         </member>
         <member name="M:Win7.Services.Controllers.SoftWareController.GetData">
             <summary>
@@ -178,6 +206,29 @@
             <param name="win7software"></param>
             <returns></returns>
         </member>
+        <member name="T:Win7.Services.WebApiApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.WebApiApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Win7.Services.ExtendXml">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Win7.Services.ExtendXml.GetValue(System.Xml.XmlNode,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="node"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="T:Win7.Services.Model.DataModel">
             <summary>
             
@@ -194,6 +245,141 @@
             </summary>
         </member>
         <member name="P:Win7.Services.Model.DataModel.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Win7.Services.Model.FileEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.FileEntity.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.FileEntity.Content">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Win7.Services.Model.ServiceUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.ServiceUrl.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.ServiceUrl.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Model.ServiceUrl.TypeFk">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Win7.Services.Win7Software">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.Icon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.OpenCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.GroupName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.FnUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.DialogSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.NoCanMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.Suspension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.HideDesktop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7Software.Info">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Win7.Services.Win7User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7User.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7User.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7User.IsAdmin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7User.OnLineDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Win7.Services.Win7UserSoftware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7UserSoftware.UserFk">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Win7.Services.Win7UserSoftware.SoftwareFk">
             <summary>
             
             </summary>

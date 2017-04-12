@@ -115,6 +115,10 @@ body,p,button,input{
     overflow-y: auto;
     background: #ddddff;
 }
+.app-desktop-group.app-desktop-soft-list>*{
+    display: inline-block;
+    margin: 0.1em;
+}
 .app-desktop-group>.icon{
     border: 0.1em solid #999999;
 }

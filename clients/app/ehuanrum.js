@@ -14,7 +14,7 @@
 				if(typeof field === 'function'){
 					$window.addEventListener('load',field);
 					if(typeof value === 'function'){
-						//$window.addEventListener('unload',value);
+						$window.addEventListener('unload',value);
 						$window.addEventListener('beforeunload',value);
 					}
 				}
@@ -162,8 +162,8 @@
 				var xhr = createXHR();
 				if(typeof url === 'string'){
 					$http(xhr,url,data,function(req){
-						promise.resolve.apply(null,[req]);
-						(backFun||function(){}).apply(null,[req]);
+						promise.resolve.apply(null,arguments);
+						(backFun||function(){}).apply(null,arguments);
 					});
 				}else if(url instanceof Array){
 					var reqData = [];
@@ -227,7 +227,12 @@
 
 				function callBack(){
 					if(xhr.readyState === 4 && xhr.status === 200){
-						(backFun||function(){})(xhr.responseText);
+						var header = {};
+						ehuanrum('base.filter')(xhr.getAllResponseHeaders().split(/[\r\n]/),function(i){return !!i;},function(i){
+							var values = i.split(':')
+							header[values.shift()] = values.join(':');
+						});
+						(backFun||function(){})(xhr.responseText,header);
 					}
 				}
 			}
