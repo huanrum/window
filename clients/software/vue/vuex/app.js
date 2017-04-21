@@ -49,9 +49,9 @@
                     }
                 });
 
-                panel.unload(base.eachrun(function(index){
+                panel.unload(base.eachrun(function (index) {
                     app.message = 'Hello Vue! ' + index;
-                },1000));
+                }, 1000));
             }
         };
     });

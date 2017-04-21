@@ -22,14 +22,14 @@
 					'<div class="rect" [title]="index"><div></div></div>'
 				].join('');
 
-				base.eachrun(function(index){
+				base.eachrun(function (index) {
 					self.index = index % 100;
-					$(panel).find('.left').css('transform','rotate(' + (180+Math.max(self.index *3.6 -180,0)) + 'deg)');
-					$(panel).find('.right').css('transform','rotate(' + (180+Math.min(self.index *3.6+0.5,180)) + 'deg)');
+					$(panel).find('.left').css('transform', 'rotate(' + (180 + Math.max(self.index * 3.6 - 180, 0)) + 'deg)');
+					$(panel).find('.right').css('transform', 'rotate(' + (180 + Math.min(self.index * 3.6 + 0.5, 180)) + 'deg)');
 					$(panel).find('.strong.percent').html(self.index);
 
-					$(panel).find('.rect div').css('width',self.index+'%');
-				},100);
+					$(panel).find('.rect div').css('width', self.index + '%');
+				}, 100);
 			},
 			onclick:function(){
 				this.panel.appendChild($e.dialog('',$e.new('div','',this.index)));

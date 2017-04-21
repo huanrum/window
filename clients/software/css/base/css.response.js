@@ -37,9 +37,9 @@
 			div.className = 'learn-body-background-origin';
 			panel.appendChild(div);
 
-			base.eachrun(function(){
-				div.style.opacity = (int++)%100/100;
-			},100);
+			base.eachrun(function () {
+				div.style.opacity = (int++) % 100 / 100;
+			}, 100);
 		}
 
 		function textShadow(panel,base){
@@ -52,10 +52,12 @@
 				div.appendChild(child);
 			});
 			panel.appendChild(div);
-			base.eachrun(function(){
+			base.eachrun(function () {
 				int++;
-				base.each(div.childNodes,function(c){c.innerHTML = int;});
-			},1000);
+				base.each(div.childNodes, function (c) {
+					c.innerHTML = int;
+				});
+			}, 1000);
 		}
 
 		function transition(panel,base){

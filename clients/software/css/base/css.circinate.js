@@ -17,17 +17,17 @@
 					'</div>'
 				].join(' ');
 
-				base.eachrun(function(){
-					perent = (perent + 1)%100;
+				base.eachrun(function () {
+					perent = (perent + 1) % 100;
 					$(panel).find('.mask span').html(perent);
 
-					$('.circle').each(function(index, el) {
+					$('.circle').each(function (index, el) {
 						var num = $(this).find('span').text() * 3.6;
-						$(this).find('.right').css('transform', "rotate(" + Math.min(num,180) + "deg)");
-						$(this).find('.left').css('transform', "rotate(" + Math.max(num - 180,0) + "deg)");
+						$(this).find('.right').css('transform', "rotate(" + Math.min(num, 180) + "deg)");
+						$(this).find('.left').css('transform', "rotate(" + Math.max(num - 180, 0) + "deg)");
 					});
 
-				},500);
+				}, 500);
 			}
 		};
 

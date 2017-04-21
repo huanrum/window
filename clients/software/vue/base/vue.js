@@ -41,9 +41,9 @@
                     }
                 });
 
-                panel.unload(base.eachrun(function(index){
+                panel.unload(base.eachrun(function (index) {
                     app.message = 'Hello Vue! ' + index;
-                },1000));
+                }, 1000));
             }
         };
     });
@@ -69,9 +69,9 @@
                         message: 'You loaded this page on ' + new Date()
                     }
                 });
-                panel.unload(base.eachrun(function(index){
-                    app2.message = index +' You loaded this page on ' + new Date();
-                },1000));
+                panel.unload(base.eachrun(function (index) {
+                    app2.message = index + ' You loaded this page on ' + new Date();
+                }, 1000));
             }
         };
     });
@@ -96,9 +96,9 @@
                     }
                 });
 
-                panel.unload(base.eachrun(function(index){
+                panel.unload(base.eachrun(function (index) {
                     app3.seen = !app3.seen;
-                },1000));
+                }, 1000));
             }
         };
     });
@@ -132,9 +132,9 @@
                     }
                 });
 
-                panel.unload(base.eachrun(function(index){
-                    app4.todos.push({text:'Test-'+index});
-                },1000));
+                panel.unload(base.eachrun(function (index) {
+                    app4.todos.push({text: 'Test-' + index});
+                }, 1000));
             }
         };
     });
@@ -197,9 +197,9 @@
                     }
                 });
 
-                panel.unload(base.eachrun(function(index){
+                panel.unload(base.eachrun(function (index) {
                     app5.index = index;
-                },200));
+                }, 200));
 
             }
         };
@@ -259,12 +259,12 @@
                     }
                 });
 
-                panel.unload(base.eachrun(function(){
+                panel.unload(base.eachrun(function () {
                     app6.index1 = app6.index1 + Math.random();
-                    base.timeout(function(){
+                    base.timeout(function () {
                         app6.index2 = app6.index2 + Math.random();
-                    },1000);
-                },2000));
+                    }, 1000);
+                }, 2000));
 
             }
         };
@@ -320,9 +320,9 @@
                     }
                 });
 
-                panel.unload(base.eachrun(function(index){
+                panel.unload(base.eachrun(function (index) {
                     app.message = 'Hello Vue! ' + index;
-                },1000));
+                }, 1000));
             }
         };
     });

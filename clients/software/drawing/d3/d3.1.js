@@ -109,19 +109,25 @@
 			nodes.append('text').attr('dx', 10).attr('dy', function(d){return d.value + 20;}).attr('stroke','#999999').attr('stroke-width','2').text(function(d){return d.value;});
 
 			if(run){
-				base.eachrun(function(){
-					base.each(svg.selectAll('g').data(),function(i){
-						if(i.value > 525 || i.value < 0){
+				base.eachrun(function () {
+					base.each(svg.selectAll('g').data(), function (i) {
+						if (i.value > 525 || i.value < 0) {
 							i.add = -1 * i.add;
 						}
 						i.value = i.value + i.add * Math.floor(Math.random() * 25);
 					});
-					var $nodes = svg.selectAll('g').attr('transform',function(d,i){return "translate("+(i * cellSize.width) + ","+(cellSize.height - d.value)+")";});
-					$nodes.selectAll('rect').attr('height',function(d){
+					var $nodes = svg.selectAll('g').attr('transform', function (d, i) {
+						return "translate(" + (i * cellSize.width) + "," + (cellSize.height - d.value) + ")";
+					});
+					$nodes.selectAll('rect').attr('height', function (d) {
 						return d.value;
 					});
-					$nodes.selectAll('text').attr('dy', function(d){return d.value + 20;}).text(function(d){return d.value;});
-				},1000);
+					$nodes.selectAll('text').attr('dy', function (d) {
+						return d.value + 20;
+					}).text(function (d) {
+						return d.value;
+					});
+				}, 1000);
 			}
 		}
 	});
@@ -169,9 +175,9 @@
 				.transition().duration(2000)
 				.attr('cy',svg.attr('height') - 100);
 
-			base.eachrun(function(){
+			base.eachrun(function () {
 				time.text(new Date());
-			},1000);
+			}, 1000);
 		}
 	});
 

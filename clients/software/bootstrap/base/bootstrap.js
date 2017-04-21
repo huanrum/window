@@ -122,10 +122,10 @@
 				panel.classList.add('bootstrap-module');
 				panel.innerHTML = $(base.template).find('.bootstrap-module').html();
 				$(panel).find('.dropdown').dropdown();
-				base.eachrun(function(){
+				base.eachrun(function () {
 					panel.processValue = (panel.processValue + 1) % 100;
-					$(panel).find('.progress.progress-striped .bar').css({width:panel.processValue+'%'});
-				},1000);
+					$(panel).find('.progress.progress-striped .bar').css({width: panel.processValue + '%'});
+				}, 1000);
 			}
 		};
 	});

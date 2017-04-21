@@ -44,26 +44,26 @@
 					'<progress value="3" max="100" ></progress>'
 				].join('');
 
-				base.eachrun(function(){
-					base.each(panel.getElementsByTagName('meter'),function(meter){
-						meter.value = (meter.value + 1)%101;
+				base.eachrun(function () {
+					base.each(panel.getElementsByTagName('meter'), function (meter) {
+						meter.value = (meter.value + 1) % 101;
 					});
 
-					base.each(panel.getElementsByTagName('progress'),function(progress){
-						if(!progress.isfall){
+					base.each(panel.getElementsByTagName('progress'), function (progress) {
+						if (!progress.isfall) {
 							progress.value = progress.value + 2;
-							if(progress.value >= 100){
+							if (progress.value >= 100) {
 								progress.isfall = true;
 							}
-						}else{
+						} else {
 							progress.value = progress.value - 2;
-							if(progress.value <= 0){
+							if (progress.value <= 0) {
 								progress.isfall = false;
 							}
 						}
 					});
 
-				},100);
+				}, 100);
 			}
 		};
 	});
@@ -82,11 +82,11 @@
 					'</div>'
 				].join('');
 
-				base.eachrun(function(){
-					base.each(panel.getElementsByClassName('card'),function(elem){
-						elem.className =(elem.className=== 'card'?'card flipped':'card');
+				base.eachrun(function () {
+					base.each(panel.getElementsByClassName('card'), function (elem) {
+						elem.className = (elem.className === 'card' ? 'card flipped' : 'card');
 					});
-				},2000);
+				}, 2000);
 			}
 		};
 	});

@@ -1607,8 +1607,8 @@
 						if(!document.body.contains($message)){
 							document.body.appendChild($message);
 							var point = base.point(e,{width:$message.offsetWidth,height:$message.offsetHeight});
-							$message.style.left = e.clientX + 'px';
-							$message.style.top = e.clientY + 'px';
+							$message.style.left = e.clientX + 10 + 'px';
+							$message.style.top = e.clientY + 10 + 'px';
 						}
 					},
 					out:function(){

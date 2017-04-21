@@ -79,12 +79,13 @@
                 binding.appendTo(panel);
             },
             action:function(panel,base){
-                panel.unload(base.eachrun(function(index){
+                panel.unload(base.eachrun(function (index) {
                     var data = binding.data();
                     data.background = $ehr.color();
                     data.counter = index % 10;
                     data.count = index;
-                },1000));
+
+                }, 1000));
             }
         };
     });

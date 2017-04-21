@@ -17,9 +17,9 @@
 				grid.appendTo(panel);
 				panel.style.height = '500px';
 
-				base.eachrun(function(){
-					grid.update(getData(base,columns));
-				},60*10000);
+				base.eachrun(function () {
+					grid.update(getData(base, columns));
+				}, 60 * 10000);
 
 
 				function selectChange(e,r,item){

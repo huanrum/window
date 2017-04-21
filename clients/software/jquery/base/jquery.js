@@ -156,12 +156,14 @@
 			content.find('.jquery-ui-button>*').button();
 
 			content.find('.jquery-ui-progress>div').progressbar();
-			var run = base.eachrun(function progress(){
-				progress.value = (progress.value || 0) + 1 +Math.floor(Math.random() * 5);
-				if(progress.value>100){progress.value = 0;}
-				content.find('.jquery-ui-progress>div').progressbar('value',progress.value);
+			var run = base.eachrun(function progress() {
+				progress.value = (progress.value || 0) + 1 + Math.floor(Math.random() * 5);
+				if (progress.value > 100) {
+					progress.value = 0;
+				}
+				content.find('.jquery-ui-progress>div').progressbar('value', progress.value);
 				content.find('.jquery-ui-progress>span').html(progress.value + '%');
-			},1000);
+			}, 1000);
 
 			content.find('.jquery-ui-slider>div').slider({range:true,slide:function(){
 				content.find('.jquery-ui-slider>span').html($(this).slider('values')[0]+ '% - '+$(this).slider('values')[1]+ '%');

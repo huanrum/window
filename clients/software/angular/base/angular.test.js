@@ -125,17 +125,17 @@
 					function init(){
 						var uploadItem = getLoadItem('Test Progress Bar');
 						$scope.uploads.push(uploadItem);
-						$e.eachrun(function(){
-							$timeout(function(){
+						$e.eachrun(function () {
+							$timeout(function () {
 								uploadItem.percentage = uploadItem.percentage + 2 * (uploadItem.direction || 1);
-								if(uploadItem.percentage > 99){
+								if (uploadItem.percentage > 99) {
 									uploadItem.direction = -1;
 								}
-								if(uploadItem.percentage < 0){
+								if (uploadItem.percentage < 0) {
 									uploadItem.direction = 1;
 								}
 							});
-						},200);
+						}, 200);
 					}
 
 				}]);
