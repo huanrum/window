@@ -6,6 +6,6 @@
 Window7.rar
 services.db3
 
-clients/software/ECMAScript6/*/node_modules
+clients/software/*/*/node_modules
 clients/software/ECMAScript6/reactJS/node_modules
 clients/software/ECMAScript6/vueJS/node_modules
