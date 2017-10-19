@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b27e4a51f4d01f85b103"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "1722e6f937609dfc3e07"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -26842,7 +26842,7 @@ _reactDom2.default.render(_react2.default.createElement(
         _react2.default.createElement(_reactRouter.Route, { path: '/sport', title: 'Sport', component: _Sport2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: '/book', title: 'Book', component: _Book2.default })
     )
-), document.getElementById('seto-view'));
+), document.body);
 
 /***/ })
 /******/ ]);

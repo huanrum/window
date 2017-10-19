@@ -36,7 +36,7 @@
 		window.document.body.appendChild(menus);
 		window.document.body.appendChild(content);
 
-		loadFile(menus,navFn,'D:\\个人文件\\TXT\\');
+		loadFile(menus,navFn,'F:\\个人文件\\TXT\\');
 
 	});
 

@@ -1,0 +1,17 @@
+[
+  {
+    "title":"AngularJs",
+    "src":"../../../../../icons/postfix/pdf.png",
+    "buy":"seto 2014.10"
+  },
+  {
+    "title":"React.js",
+    "src":"../../../../../icons/postfix/ppt.png",
+    "buy":"seto 2016.10"
+  },
+  {
+    "title":"Vue.js",
+    "src":"../../../../../icons/postfix/doc.png",
+    "buy":"seto 2016.10"
+  }
+]

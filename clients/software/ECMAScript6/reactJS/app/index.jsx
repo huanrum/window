@@ -19,4 +19,4 @@ ReactDOM.render((
             <Route path="/book" title="Book" component={Book}/>
         </Route>
     </Router>
-), document.getElementById('seto-view'));
+), document.body);
